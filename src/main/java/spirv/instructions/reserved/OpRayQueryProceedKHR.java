@@ -76,6 +76,9 @@ public class OpRayQueryProceedKHR implements ReservedInstruction, ResultType, Re
 			return false;
 		}
 		OpRayQueryProceedKHR other = (OpRayQueryProceedKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

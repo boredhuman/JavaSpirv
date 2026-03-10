@@ -66,6 +66,9 @@ public class OpImage implements ImageInstruction, ResultType, Result {
 			return false;
 		}
 		OpImage other = (OpImage) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -41,6 +41,9 @@ public class OpSourceExtension implements DebugInstruction {
 			return false;
 		}
 		OpSourceExtension other = (OpSourceExtension) o;
+		if (this == other) {
+			return true;
+		}
 		return this.extension.equals(other.extension);
 	}
 

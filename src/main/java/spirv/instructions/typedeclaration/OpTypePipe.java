@@ -58,10 +58,13 @@ public class OpTypePipe implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypePipe other = (OpTypePipe) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}
-		return this.qualifier != other.qualifier;
+		return this.qualifier == other.qualifier;
 	}
 
 	@Override

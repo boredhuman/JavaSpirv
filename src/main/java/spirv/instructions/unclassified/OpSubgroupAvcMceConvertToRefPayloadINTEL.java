@@ -71,6 +71,9 @@ public class OpSubgroupAvcMceConvertToRefPayloadINTEL implements Instruction, Re
 			return false;
 		}
 		OpSubgroupAvcMceConvertToRefPayloadINTEL other = (OpSubgroupAvcMceConvertToRefPayloadINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

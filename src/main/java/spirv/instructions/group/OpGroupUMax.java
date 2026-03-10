@@ -78,6 +78,9 @@ public class OpGroupUMax implements GroupInstruction, ResultType, Result {
 			return false;
 		}
 		OpGroupUMax other = (OpGroupUMax) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

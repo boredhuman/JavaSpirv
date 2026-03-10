@@ -74,6 +74,9 @@ public class OpLessOrGreater implements RelationalandLogicalInstruction, ResultT
 			return false;
 		}
 		OpLessOrGreater other = (OpLessOrGreater) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

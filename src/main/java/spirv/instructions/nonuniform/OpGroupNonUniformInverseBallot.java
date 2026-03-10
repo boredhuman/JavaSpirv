@@ -74,6 +74,9 @@ public class OpGroupNonUniformInverseBallot implements NonUniformInstruction, Re
 			return false;
 		}
 		OpGroupNonUniformInverseBallot other = (OpGroupNonUniformInverseBallot) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

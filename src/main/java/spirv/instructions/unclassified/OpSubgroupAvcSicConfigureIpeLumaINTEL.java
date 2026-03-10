@@ -92,6 +92,9 @@ public class OpSubgroupAvcSicConfigureIpeLumaINTEL implements Instruction, Resul
 			return false;
 		}
 		OpSubgroupAvcSicConfigureIpeLumaINTEL other = (OpSubgroupAvcSicConfigureIpeLumaINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

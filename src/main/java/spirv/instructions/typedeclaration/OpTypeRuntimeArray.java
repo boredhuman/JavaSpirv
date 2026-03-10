@@ -57,6 +57,9 @@ public class OpTypeRuntimeArray implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeRuntimeArray other = (OpTypeRuntimeArray) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

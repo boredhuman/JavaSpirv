@@ -71,6 +71,9 @@ public class OpSubgroupAvcSicConvertToMceResultINTEL implements Instruction, Res
 			return false;
 		}
 		OpSubgroupAvcSicConvertToMceResultINTEL other = (OpSubgroupAvcSicConvertToMceResultINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

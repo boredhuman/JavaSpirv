@@ -80,6 +80,9 @@ public class OpGetKernelMaxNumSubgroups implements DeviceSideEnqueueInstruction,
 			return false;
 		}
 		OpGetKernelMaxNumSubgroups other = (OpGetKernelMaxNumSubgroups) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -71,6 +71,9 @@ public class OpConvertHandleToSamplerINTEL implements ImageInstruction, ResultTy
 			return false;
 		}
 		OpConvertHandleToSamplerINTEL other = (OpConvertHandleToSamplerINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

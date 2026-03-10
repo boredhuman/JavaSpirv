@@ -71,6 +71,9 @@ public class OpBitCastArrayQCOM implements ConversionInstruction, ResultType, Re
 			return false;
 		}
 		OpBitCastArrayQCOM other = (OpBitCastArrayQCOM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

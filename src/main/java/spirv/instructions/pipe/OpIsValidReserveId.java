@@ -71,6 +71,9 @@ public class OpIsValidReserveId implements PipeInstruction, ResultType, Result {
 			return false;
 		}
 		OpIsValidReserveId other = (OpIsValidReserveId) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

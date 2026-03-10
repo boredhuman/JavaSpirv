@@ -53,6 +53,9 @@ public class OpMemberDecorate implements AnnotationInstruction {
 			return false;
 		}
 		OpMemberDecorate other = (OpMemberDecorate) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.structureType.equals(other.structureType)) {
 			return false;
 		}

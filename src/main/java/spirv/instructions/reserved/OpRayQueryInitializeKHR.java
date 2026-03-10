@@ -69,6 +69,9 @@ public class OpRayQueryInitializeKHR implements ReservedInstruction {
 			return false;
 		}
 		OpRayQueryInitializeKHR other = (OpRayQueryInitializeKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.rayQuery.equals(other.rayQuery)) {
 			return false;
 		}

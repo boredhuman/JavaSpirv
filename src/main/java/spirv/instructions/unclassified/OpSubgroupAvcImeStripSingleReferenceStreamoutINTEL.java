@@ -71,6 +71,9 @@ public class OpSubgroupAvcImeStripSingleReferenceStreamoutINTEL implements Instr
 			return false;
 		}
 		OpSubgroupAvcImeStripSingleReferenceStreamoutINTEL other = (OpSubgroupAvcImeStripSingleReferenceStreamoutINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

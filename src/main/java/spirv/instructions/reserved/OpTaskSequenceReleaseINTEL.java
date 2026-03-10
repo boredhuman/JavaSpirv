@@ -43,6 +43,9 @@ public class OpTaskSequenceReleaseINTEL implements ReservedInstruction {
 			return false;
 		}
 		OpTaskSequenceReleaseINTEL other = (OpTaskSequenceReleaseINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		return this.sequence.equals(other.sequence);
 	}
 

@@ -71,6 +71,9 @@ public class OpSubgroupAvcSicGetIpeLumaShapeINTEL implements Instruction, Result
 			return false;
 		}
 		OpSubgroupAvcSicGetIpeLumaShapeINTEL other = (OpSubgroupAvcSicGetIpeLumaShapeINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

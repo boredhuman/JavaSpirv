@@ -101,6 +101,9 @@ public class OpSubgroupAvcSicConfigureIpeLumaChromaINTEL implements Instruction,
 			return false;
 		}
 		OpSubgroupAvcSicConfigureIpeLumaChromaINTEL other = (OpSubgroupAvcSicConfigureIpeLumaChromaINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

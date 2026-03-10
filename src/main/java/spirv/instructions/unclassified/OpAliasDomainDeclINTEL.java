@@ -70,6 +70,9 @@ public class OpAliasDomainDeclINTEL implements Instruction, Result {
 			return false;
 		}
 		OpAliasDomainDeclINTEL other = (OpAliasDomainDeclINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

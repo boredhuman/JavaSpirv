@@ -48,6 +48,9 @@ public class OpRayQueryTerminateKHR implements ReservedInstruction {
 			return false;
 		}
 		OpRayQueryTerminateKHR other = (OpRayQueryTerminateKHR) o;
+		if (this == other) {
+			return true;
+		}
 		return this.rayQuery.equals(other.rayQuery);
 	}
 

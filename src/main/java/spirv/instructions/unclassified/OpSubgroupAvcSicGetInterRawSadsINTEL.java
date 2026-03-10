@@ -71,6 +71,9 @@ public class OpSubgroupAvcSicGetInterRawSadsINTEL implements Instruction, Result
 			return false;
 		}
 		OpSubgroupAvcSicGetInterRawSadsINTEL other = (OpSubgroupAvcSicGetInterRawSadsINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

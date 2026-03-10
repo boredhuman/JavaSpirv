@@ -82,6 +82,9 @@ public class OpSpecConstantTargetINTEL implements ConstantCreationInstruction, R
 			return false;
 		}
 		OpSpecConstantTargetINTEL other = (OpSpecConstantTargetINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

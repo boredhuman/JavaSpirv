@@ -80,6 +80,9 @@ public class OpWritePipe implements PipeInstruction, ResultType, Result {
 			return false;
 		}
 		OpWritePipe other = (OpWritePipe) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

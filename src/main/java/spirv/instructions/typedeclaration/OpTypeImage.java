@@ -84,6 +84,9 @@ public class OpTypeImage implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeImage other = (OpTypeImage) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

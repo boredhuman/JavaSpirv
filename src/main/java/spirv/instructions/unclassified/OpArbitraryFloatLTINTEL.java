@@ -80,6 +80,9 @@ public class OpArbitraryFloatLTINTEL implements Instruction, ResultType, Result 
 			return false;
 		}
 		OpArbitraryFloatLTINTEL other = (OpArbitraryFloatLTINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -95,7 +98,7 @@ public class OpArbitraryFloatLTINTEL implements Instruction, ResultType, Result 
 		if (!this.b.equals(other.b)) {
 			return false;
 		}
-		return this.mb != other.mb;
+		return this.mb == other.mb;
 	}
 
 	@Override

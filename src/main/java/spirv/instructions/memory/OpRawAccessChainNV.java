@@ -94,6 +94,9 @@ public class OpRawAccessChainNV implements MemoryInstruction, ResultType, Result
 			return false;
 		}
 		OpRawAccessChainNV other = (OpRawAccessChainNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

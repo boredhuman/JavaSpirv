@@ -77,6 +77,9 @@ public class OpAtomicFlagTestAndSet implements AtomicInstruction, ResultType, Re
 			return false;
 		}
 		OpAtomicFlagTestAndSet other = (OpAtomicFlagTestAndSet) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

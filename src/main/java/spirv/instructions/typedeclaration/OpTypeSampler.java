@@ -49,7 +49,10 @@ public class OpTypeSampler implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeSampler other = (OpTypeSampler) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

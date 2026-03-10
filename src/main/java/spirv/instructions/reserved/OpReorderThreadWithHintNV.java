@@ -46,6 +46,9 @@ public class OpReorderThreadWithHintNV implements ReservedInstruction {
 			return false;
 		}
 		OpReorderThreadWithHintNV other = (OpReorderThreadWithHintNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.hint.equals(other.hint)) {
 			return false;
 		}

@@ -69,6 +69,9 @@ public class OpUGreaterThan implements RelationalandLogicalInstruction, ResultTy
 			return false;
 		}
 		OpUGreaterThan other = (OpUGreaterThan) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

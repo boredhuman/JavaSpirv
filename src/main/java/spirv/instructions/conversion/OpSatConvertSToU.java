@@ -71,6 +71,9 @@ public class OpSatConvertSToU implements ConversionInstruction, ResultType, Resu
 			return false;
 		}
 		OpSatConvertSToU other = (OpSatConvertSToU) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

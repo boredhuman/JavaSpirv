@@ -71,6 +71,9 @@ public class OpSubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL implements Inst
 			return false;
 		}
 		OpSubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL other = (OpSubgroupAvcSicGetPackedSkcLumaCountThresholdINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

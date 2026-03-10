@@ -71,6 +71,9 @@ public class OpHitObjectGetShaderRecordBufferHandleNV implements ReservedInstruc
 			return false;
 		}
 		OpHitObjectGetShaderRecordBufferHandleNV other = (OpHitObjectGetShaderRecordBufferHandleNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -71,6 +71,9 @@ public class OpSubgroupAvcImeGetDualReferenceStreaminINTEL implements Instructio
 			return false;
 		}
 		OpSubgroupAvcImeGetDualReferenceStreaminINTEL other = (OpSubgroupAvcImeGetDualReferenceStreaminINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

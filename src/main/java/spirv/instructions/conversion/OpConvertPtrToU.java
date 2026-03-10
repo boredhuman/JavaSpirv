@@ -71,6 +71,9 @@ public class OpConvertPtrToU implements ConversionInstruction, ResultType, Resul
 			return false;
 		}
 		OpConvertPtrToU other = (OpConvertPtrToU) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

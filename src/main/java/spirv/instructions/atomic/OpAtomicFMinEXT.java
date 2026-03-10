@@ -80,6 +80,9 @@ public class OpAtomicFMinEXT implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicFMinEXT other = (OpAtomicFMinEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

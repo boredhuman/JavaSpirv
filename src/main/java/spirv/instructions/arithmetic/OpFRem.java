@@ -69,6 +69,9 @@ public class OpFRem implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpFRem other = (OpFRem) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

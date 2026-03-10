@@ -54,7 +54,10 @@ public class OpTypeDeviceEvent implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeDeviceEvent other = (OpTypeDeviceEvent) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

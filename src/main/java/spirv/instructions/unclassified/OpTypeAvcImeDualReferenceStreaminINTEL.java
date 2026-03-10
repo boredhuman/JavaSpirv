@@ -54,7 +54,10 @@ public class OpTypeAvcImeDualReferenceStreaminINTEL implements Instruction, Resu
 			return false;
 		}
 		OpTypeAvcImeDualReferenceStreaminINTEL other = (OpTypeAvcImeDualReferenceStreaminINTEL) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

@@ -58,6 +58,9 @@ public class OpHitObjectRecordMissNV implements ReservedInstruction {
 			return false;
 		}
 		OpHitObjectRecordMissNV other = (OpHitObjectRecordMissNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.hitObject.equals(other.hitObject)) {
 			return false;
 		}

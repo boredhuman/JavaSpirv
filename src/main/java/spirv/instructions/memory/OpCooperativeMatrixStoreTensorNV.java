@@ -78,6 +78,9 @@ public class OpCooperativeMatrixStoreTensorNV implements MemoryInstruction {
 			return false;
 		}
 		OpCooperativeMatrixStoreTensorNV other = (OpCooperativeMatrixStoreTensorNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}

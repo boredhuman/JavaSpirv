@@ -80,6 +80,9 @@ public class OpGetKernelPreferredWorkGroupSizeMultiple implements DeviceSideEnqu
 			return false;
 		}
 		OpGetKernelPreferredWorkGroupSizeMultiple other = (OpGetKernelPreferredWorkGroupSizeMultiple) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

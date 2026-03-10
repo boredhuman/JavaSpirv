@@ -66,6 +66,9 @@ public class OpImageWrite implements ImageInstruction {
 			return false;
 		}
 		OpImageWrite other = (OpImageWrite) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.image.equals(other.image)) {
 			return false;
 		}

@@ -43,6 +43,9 @@ public class OpEmitStreamVertex implements PrimitiveInstruction {
 			return false;
 		}
 		OpEmitStreamVertex other = (OpEmitStreamVertex) o;
+		if (this == other) {
+			return true;
+		}
 		return this.stream.equals(other.stream);
 	}
 

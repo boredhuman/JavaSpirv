@@ -77,6 +77,9 @@ public class OpSubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL imp
 			return false;
 		}
 		OpSubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL other = (OpSubgroupAvcMceGetInterReferenceInterlacedFieldPolaritiesINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

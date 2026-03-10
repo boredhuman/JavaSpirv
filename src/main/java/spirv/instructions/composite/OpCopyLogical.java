@@ -66,6 +66,9 @@ public class OpCopyLogical implements CompositeInstruction, ResultType, Result {
 			return false;
 		}
 		OpCopyLogical other = (OpCopyLogical) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

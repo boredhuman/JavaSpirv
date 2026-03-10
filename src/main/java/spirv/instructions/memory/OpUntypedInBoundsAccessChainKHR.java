@@ -85,6 +85,9 @@ public class OpUntypedInBoundsAccessChainKHR implements MemoryInstruction, Resul
 			return false;
 		}
 		OpUntypedInBoundsAccessChainKHR other = (OpUntypedInBoundsAccessChainKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

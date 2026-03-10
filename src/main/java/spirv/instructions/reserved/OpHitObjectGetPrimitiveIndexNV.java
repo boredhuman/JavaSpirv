@@ -71,6 +71,9 @@ public class OpHitObjectGetPrimitiveIndexNV implements ReservedInstruction, Resu
 			return false;
 		}
 		OpHitObjectGetPrimitiveIndexNV other = (OpHitObjectGetPrimitiveIndexNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

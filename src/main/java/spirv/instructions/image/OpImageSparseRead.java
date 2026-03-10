@@ -96,6 +96,9 @@ public class OpImageSparseRead implements ImageInstruction, ResultType, Result {
 			return false;
 		}
 		OpImageSparseRead other = (OpImageSparseRead) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

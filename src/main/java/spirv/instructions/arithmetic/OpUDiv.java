@@ -69,6 +69,9 @@ public class OpUDiv implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpUDiv other = (OpUDiv) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

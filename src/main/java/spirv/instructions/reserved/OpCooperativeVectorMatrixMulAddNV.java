@@ -127,6 +127,9 @@ public class OpCooperativeVectorMatrixMulAddNV implements ReservedInstruction, R
 			return false;
 		}
 		OpCooperativeVectorMatrixMulAddNV other = (OpCooperativeVectorMatrixMulAddNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -58,6 +58,9 @@ public class OpLoopMerge implements ControlFlowInstruction {
 			return false;
 		}
 		OpLoopMerge other = (OpLoopMerge) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.mergeBlock.equals(other.mergeBlock)) {
 			return false;
 		}

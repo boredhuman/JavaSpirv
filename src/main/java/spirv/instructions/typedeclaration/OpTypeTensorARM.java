@@ -77,6 +77,9 @@ public class OpTypeTensorARM implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeTensorARM other = (OpTypeTensorARM) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

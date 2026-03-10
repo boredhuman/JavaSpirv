@@ -71,6 +71,9 @@ public class OpHitObjectGetSpherePositionNV implements ReservedInstruction, Resu
 			return false;
 		}
 		OpHitObjectGetSpherePositionNV other = (OpHitObjectGetSpherePositionNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

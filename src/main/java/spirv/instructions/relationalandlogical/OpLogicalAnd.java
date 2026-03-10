@@ -69,6 +69,9 @@ public class OpLogicalAnd implements RelationalandLogicalInstruction, ResultType
 			return false;
 		}
 		OpLogicalAnd other = (OpLogicalAnd) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

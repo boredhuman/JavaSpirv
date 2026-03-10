@@ -73,10 +73,13 @@ public class OpIsHelperInvocationEXT implements ReservedInstruction, ResultType,
 			return false;
 		}
 		OpIsHelperInvocationEXT other = (OpIsHelperInvocationEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
-		return this.idResult != other.idResult;
+		return this.idResult == other.idResult;
 	}
 
 	@Override

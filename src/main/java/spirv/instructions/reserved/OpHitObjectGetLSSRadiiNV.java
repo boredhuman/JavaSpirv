@@ -71,6 +71,9 @@ public class OpHitObjectGetLSSRadiiNV implements ReservedInstruction, ResultType
 			return false;
 		}
 		OpHitObjectGetLSSRadiiNV other = (OpHitObjectGetLSSRadiiNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

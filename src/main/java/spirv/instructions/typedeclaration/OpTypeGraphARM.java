@@ -68,6 +68,9 @@ public class OpTypeGraphARM implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeGraphARM other = (OpTypeGraphARM) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

@@ -54,7 +54,10 @@ public class OpTypeHitObjectNV implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeHitObjectNV other = (OpTypeHitObjectNV) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

@@ -74,6 +74,9 @@ public class OpSubgroupAvcMceGetDefaultInterShapePenaltyINTEL implements Instruc
 			return false;
 		}
 		OpSubgroupAvcMceGetDefaultInterShapePenaltyINTEL other = (OpSubgroupAvcMceGetDefaultInterShapePenaltyINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

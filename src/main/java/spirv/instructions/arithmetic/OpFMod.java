@@ -69,6 +69,9 @@ public class OpFMod implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpFMod other = (OpFMod) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

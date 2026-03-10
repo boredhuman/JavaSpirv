@@ -71,6 +71,9 @@ public class OpHitObjectGetCurrentTimeNV implements ReservedInstruction, ResultT
 			return false;
 		}
 		OpHitObjectGetCurrentTimeNV other = (OpHitObjectGetCurrentTimeNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

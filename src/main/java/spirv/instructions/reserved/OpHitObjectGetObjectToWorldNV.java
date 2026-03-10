@@ -71,6 +71,9 @@ public class OpHitObjectGetObjectToWorldNV implements ReservedInstruction, Resul
 			return false;
 		}
 		OpHitObjectGetObjectToWorldNV other = (OpHitObjectGetObjectToWorldNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

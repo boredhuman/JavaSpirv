@@ -75,6 +75,9 @@ public class OpAtomicExchange implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicExchange other = (OpAtomicExchange) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

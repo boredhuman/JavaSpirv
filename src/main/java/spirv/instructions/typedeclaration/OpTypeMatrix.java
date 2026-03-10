@@ -60,13 +60,16 @@ public class OpTypeMatrix implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeMatrix other = (OpTypeMatrix) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}
 		if (!this.columnType.equals(other.columnType)) {
 			return false;
 		}
-		return this.columnCount != other.columnCount;
+		return this.columnCount == other.columnCount;
 	}
 
 	@Override

@@ -71,6 +71,9 @@ public class OpConvertHandleToImageINTEL implements ImageInstruction, ResultType
 			return false;
 		}
 		OpConvertHandleToImageINTEL other = (OpConvertHandleToImageINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

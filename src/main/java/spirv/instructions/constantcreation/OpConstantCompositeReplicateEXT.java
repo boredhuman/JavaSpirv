@@ -71,6 +71,9 @@ public class OpConstantCompositeReplicateEXT implements ConstantCreationInstruct
 			return false;
 		}
 		OpConstantCompositeReplicateEXT other = (OpConstantCompositeReplicateEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

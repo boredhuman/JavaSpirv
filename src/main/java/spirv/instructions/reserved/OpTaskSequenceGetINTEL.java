@@ -71,6 +71,9 @@ public class OpTaskSequenceGetINTEL implements ReservedInstruction, ResultType, 
 			return false;
 		}
 		OpTaskSequenceGetINTEL other = (OpTaskSequenceGetINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

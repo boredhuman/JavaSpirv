@@ -91,6 +91,9 @@ public class OpSUDot implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpSUDot other = (OpSUDot) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

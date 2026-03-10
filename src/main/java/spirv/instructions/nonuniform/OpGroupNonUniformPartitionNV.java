@@ -76,6 +76,9 @@ public class OpGroupNonUniformPartitionNV implements NonUniformInstruction, Resu
 			return false;
 		}
 		OpGroupNonUniformPartitionNV other = (OpGroupNonUniformPartitionNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

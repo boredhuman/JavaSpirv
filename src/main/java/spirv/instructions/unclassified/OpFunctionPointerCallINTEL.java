@@ -84,6 +84,9 @@ public class OpFunctionPointerCallINTEL implements Instruction, ResultType, Resu
 			return false;
 		}
 		OpFunctionPointerCallINTEL other = (OpFunctionPointerCallINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

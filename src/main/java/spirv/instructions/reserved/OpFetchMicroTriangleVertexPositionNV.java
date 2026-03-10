@@ -83,6 +83,9 @@ public class OpFetchMicroTriangleVertexPositionNV implements ReservedInstruction
 			return false;
 		}
 		OpFetchMicroTriangleVertexPositionNV other = (OpFetchMicroTriangleVertexPositionNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

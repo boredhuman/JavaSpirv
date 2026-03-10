@@ -71,6 +71,9 @@ public class OpSubgroupAvcImeGetTruncatedSearchIndicationINTEL implements Instru
 			return false;
 		}
 		OpSubgroupAvcImeGetTruncatedSearchIndicationINTEL other = (OpSubgroupAvcImeGetTruncatedSearchIndicationINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

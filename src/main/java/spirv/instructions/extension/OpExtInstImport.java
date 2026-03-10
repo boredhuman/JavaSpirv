@@ -55,6 +55,9 @@ public class OpExtInstImport implements ExtensionInstruction, Result {
 			return false;
 		}
 		OpExtInstImport other = (OpExtInstImport) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

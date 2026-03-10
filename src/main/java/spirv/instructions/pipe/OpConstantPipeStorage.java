@@ -77,6 +77,9 @@ public class OpConstantPipeStorage implements PipeInstruction, ResultType, Resul
 			return false;
 		}
 		OpConstantPipeStorage other = (OpConstantPipeStorage) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -89,7 +92,7 @@ public class OpConstantPipeStorage implements PipeInstruction, ResultType, Resul
 		if (this.packetAlignment != other.packetAlignment) {
 			return false;
 		}
-		return this.capacity != other.capacity;
+		return this.capacity == other.capacity;
 	}
 
 	@Override

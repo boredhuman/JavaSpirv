@@ -41,6 +41,9 @@ public class OpModuleProcessed implements DebugInstruction {
 			return false;
 		}
 		OpModuleProcessed other = (OpModuleProcessed) o;
+		if (this == other) {
+			return true;
+		}
 		return this.process.equals(other.process);
 	}
 

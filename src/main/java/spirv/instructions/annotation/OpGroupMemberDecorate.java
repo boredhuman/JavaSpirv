@@ -52,6 +52,9 @@ public class OpGroupMemberDecorate implements AnnotationInstruction {
 			return false;
 		}
 		OpGroupMemberDecorate other = (OpGroupMemberDecorate) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.decorationGroup.equals(other.decorationGroup)) {
 			return false;
 		}

@@ -66,6 +66,9 @@ public class OpConvertSToF implements ConversionInstruction, ResultType, Result 
 			return false;
 		}
 		OpConvertSToF other = (OpConvertSToF) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

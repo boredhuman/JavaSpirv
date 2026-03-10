@@ -47,10 +47,13 @@ public class OpConditionalCapabilityINTEL implements ModeSettingInstruction {
 			return false;
 		}
 		OpConditionalCapabilityINTEL other = (OpConditionalCapabilityINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.condition.equals(other.condition)) {
 			return false;
 		}
-		return this.capability != other.capability;
+		return this.capability == other.capability;
 	}
 
 	@Override

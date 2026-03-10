@@ -77,6 +77,9 @@ public class OpCompositeExtract implements CompositeInstruction, ResultType, Res
 			return false;
 		}
 		OpCompositeExtract other = (OpCompositeExtract) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

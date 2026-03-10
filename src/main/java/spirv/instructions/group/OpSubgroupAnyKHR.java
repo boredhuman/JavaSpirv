@@ -76,6 +76,9 @@ public class OpSubgroupAnyKHR implements GroupInstruction, ResultType, Result {
 			return false;
 		}
 		OpSubgroupAnyKHR other = (OpSubgroupAnyKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -123,6 +123,9 @@ public class OpUntypedGroupAsyncCopyKHR implements GroupInstruction, ResultType,
 			return false;
 		}
 		OpUntypedGroupAsyncCopyKHR other = (OpUntypedGroupAsyncCopyKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

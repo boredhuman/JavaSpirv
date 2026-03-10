@@ -69,6 +69,9 @@ public class OpISubBorrow implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpISubBorrow other = (OpISubBorrow) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

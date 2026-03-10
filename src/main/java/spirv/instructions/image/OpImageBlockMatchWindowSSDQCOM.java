@@ -83,6 +83,9 @@ public class OpImageBlockMatchWindowSSDQCOM implements ImageInstruction, ResultT
 			return false;
 		}
 		OpImageBlockMatchWindowSSDQCOM other = (OpImageBlockMatchWindowSSDQCOM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -66,6 +66,9 @@ public class OpLogicalNot implements RelationalandLogicalInstruction, ResultType
 			return false;
 		}
 		OpLogicalNot other = (OpLogicalNot) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -77,6 +77,9 @@ public class OpCooperativeMatrixStoreKHR implements MemoryInstruction {
 			return false;
 		}
 		OpCooperativeMatrixStoreKHR other = (OpCooperativeMatrixStoreKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}

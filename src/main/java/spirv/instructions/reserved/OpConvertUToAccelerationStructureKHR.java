@@ -76,6 +76,9 @@ public class OpConvertUToAccelerationStructureKHR implements ReservedInstruction
 			return false;
 		}
 		OpConvertUToAccelerationStructureKHR other = (OpConvertUToAccelerationStructureKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

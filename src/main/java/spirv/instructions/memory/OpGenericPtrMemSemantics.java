@@ -71,6 +71,9 @@ public class OpGenericPtrMemSemantics implements MemoryInstruction, ResultType, 
 			return false;
 		}
 		OpGenericPtrMemSemantics other = (OpGenericPtrMemSemantics) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

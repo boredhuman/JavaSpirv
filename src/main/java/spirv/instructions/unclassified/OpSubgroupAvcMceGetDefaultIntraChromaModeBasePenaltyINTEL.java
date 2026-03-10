@@ -68,10 +68,13 @@ public class OpSubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL implement
 			return false;
 		}
 		OpSubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL other = (OpSubgroupAvcMceGetDefaultIntraChromaModeBasePenaltyINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
-		return this.idResult != other.idResult;
+		return this.idResult == other.idResult;
 	}
 
 	@Override

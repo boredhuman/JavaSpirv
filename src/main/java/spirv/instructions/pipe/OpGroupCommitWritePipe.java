@@ -55,6 +55,9 @@ public class OpGroupCommitWritePipe implements PipeInstruction {
 			return false;
 		}
 		OpGroupCommitWritePipe other = (OpGroupCommitWritePipe) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.execution.equals(other.execution)) {
 			return false;
 		}

@@ -79,6 +79,9 @@ public class OpConstantSampler implements ConstantCreationInstruction, ResultTyp
 			return false;
 		}
 		OpConstantSampler other = (OpConstantSampler) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -91,7 +94,7 @@ public class OpConstantSampler implements ConstantCreationInstruction, ResultTyp
 		if (this.param != other.param) {
 			return false;
 		}
-		return this.samplerFilterMode != other.samplerFilterMode;
+		return this.samplerFilterMode == other.samplerFilterMode;
 	}
 
 	@Override

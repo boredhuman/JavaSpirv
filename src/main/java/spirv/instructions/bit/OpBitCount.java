@@ -66,6 +66,9 @@ public class OpBitCount implements BitInstruction, ResultType, Result {
 			return false;
 		}
 		OpBitCount other = (OpBitCount) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -77,6 +77,9 @@ public class OpPhi implements ControlFlowInstruction, ResultType, Result {
 			return false;
 		}
 		OpPhi other = (OpPhi) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

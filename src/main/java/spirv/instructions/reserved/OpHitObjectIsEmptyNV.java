@@ -71,6 +71,9 @@ public class OpHitObjectIsEmptyNV implements ReservedInstruction, ResultType, Re
 			return false;
 		}
 		OpHitObjectIsEmptyNV other = (OpHitObjectIsEmptyNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -85,6 +85,9 @@ public class OpPtrAccessChain implements MemoryInstruction, ResultType, Result {
 			return false;
 		}
 		OpPtrAccessChain other = (OpPtrAccessChain) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

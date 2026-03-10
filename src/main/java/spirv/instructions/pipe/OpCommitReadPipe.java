@@ -52,6 +52,9 @@ public class OpCommitReadPipe implements PipeInstruction {
 			return false;
 		}
 		OpCommitReadPipe other = (OpCommitReadPipe) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pipe.equals(other.pipe)) {
 			return false;
 		}

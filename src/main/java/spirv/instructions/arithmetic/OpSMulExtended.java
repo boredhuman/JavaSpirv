@@ -69,6 +69,9 @@ public class OpSMulExtended implements ArithmeticInstruction, ResultType, Result
 			return false;
 		}
 		OpSMulExtended other = (OpSMulExtended) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

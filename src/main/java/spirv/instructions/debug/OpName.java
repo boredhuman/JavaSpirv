@@ -44,6 +44,9 @@ public class OpName implements DebugInstruction {
 			return false;
 		}
 		OpName other = (OpName) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.target.equals(other.target)) {
 			return false;
 		}

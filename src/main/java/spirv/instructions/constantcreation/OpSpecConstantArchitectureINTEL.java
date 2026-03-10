@@ -80,6 +80,9 @@ public class OpSpecConstantArchitectureINTEL implements ConstantCreationInstruct
 			return false;
 		}
 		OpSpecConstantArchitectureINTEL other = (OpSpecConstantArchitectureINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -95,7 +98,7 @@ public class OpSpecConstantArchitectureINTEL implements ConstantCreationInstruct
 		if (this.opcode != other.opcode) {
 			return false;
 		}
-		return this.architecture != other.architecture;
+		return this.architecture == other.architecture;
 	}
 
 	@Override

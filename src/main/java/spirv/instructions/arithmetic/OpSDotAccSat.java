@@ -94,6 +94,9 @@ public class OpSDotAccSat implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpSDotAccSat other = (OpSDotAccSat) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

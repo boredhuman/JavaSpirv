@@ -44,10 +44,13 @@ public class OpSelectionMerge implements ControlFlowInstruction {
 			return false;
 		}
 		OpSelectionMerge other = (OpSelectionMerge) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.mergeBlock.equals(other.mergeBlock)) {
 			return false;
 		}
-		return this.selectionControl != other.selectionControl;
+		return this.selectionControl == other.selectionControl;
 	}
 
 	@Override

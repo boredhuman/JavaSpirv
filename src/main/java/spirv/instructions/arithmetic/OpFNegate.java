@@ -66,6 +66,9 @@ public class OpFNegate implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpFNegate other = (OpFNegate) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

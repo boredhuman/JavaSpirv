@@ -80,6 +80,9 @@ public class OpSubgroupAvcSicEvaluateWithDualReferenceINTEL implements Instructi
 			return false;
 		}
 		OpSubgroupAvcSicEvaluateWithDualReferenceINTEL other = (OpSubgroupAvcSicEvaluateWithDualReferenceINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -80,6 +80,9 @@ public class OpSubgroupAvcSicSetIntraLumaModeCostFunctionINTEL implements Instru
 			return false;
 		}
 		OpSubgroupAvcSicSetIntraLumaModeCostFunctionINTEL other = (OpSubgroupAvcSicSetIntraLumaModeCostFunctionINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

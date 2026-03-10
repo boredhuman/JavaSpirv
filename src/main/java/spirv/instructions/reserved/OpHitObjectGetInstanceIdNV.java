@@ -71,6 +71,9 @@ public class OpHitObjectGetInstanceIdNV implements ReservedInstruction, ResultTy
 			return false;
 		}
 		OpHitObjectGetInstanceIdNV other = (OpHitObjectGetInstanceIdNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

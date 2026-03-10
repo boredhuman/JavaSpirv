@@ -74,6 +74,9 @@ public class OpUMul32x16INTEL implements ReservedInstruction, ResultType, Result
 			return false;
 		}
 		OpUMul32x16INTEL other = (OpUMul32x16INTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

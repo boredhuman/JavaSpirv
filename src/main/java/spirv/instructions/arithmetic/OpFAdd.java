@@ -69,6 +69,9 @@ public class OpFAdd implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpFAdd other = (OpFAdd) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

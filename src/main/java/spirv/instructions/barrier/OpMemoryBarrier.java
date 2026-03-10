@@ -41,6 +41,9 @@ public class OpMemoryBarrier implements BarrierInstruction {
 			return false;
 		}
 		OpMemoryBarrier other = (OpMemoryBarrier) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.memory.equals(other.memory)) {
 			return false;
 		}

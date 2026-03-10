@@ -66,6 +66,9 @@ public class OpAny implements RelationalandLogicalInstruction, ResultType, Resul
 			return false;
 		}
 		OpAny other = (OpAny) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

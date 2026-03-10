@@ -38,6 +38,9 @@ public class OpReturnValue implements ControlFlowInstruction {
 			return false;
 		}
 		OpReturnValue other = (OpReturnValue) o;
+		if (this == other) {
+			return true;
+		}
 		return this.value.equals(other.value);
 	}
 

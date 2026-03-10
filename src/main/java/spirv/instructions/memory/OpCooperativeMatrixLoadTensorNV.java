@@ -106,6 +106,9 @@ public class OpCooperativeMatrixLoadTensorNV implements MemoryInstruction, Resul
 			return false;
 		}
 		OpCooperativeMatrixLoadTensorNV other = (OpCooperativeMatrixLoadTensorNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

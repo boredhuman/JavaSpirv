@@ -91,6 +91,9 @@ public class OpCooperativeMatrixMulAddKHR implements ArithmeticInstruction, Resu
 			return false;
 		}
 		OpCooperativeMatrixMulAddKHR other = (OpCooperativeMatrixMulAddKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

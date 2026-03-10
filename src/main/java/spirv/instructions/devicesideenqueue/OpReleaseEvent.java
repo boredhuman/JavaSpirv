@@ -43,6 +43,9 @@ public class OpReleaseEvent implements DeviceSideEnqueueInstruction {
 			return false;
 		}
 		OpReleaseEvent other = (OpReleaseEvent) o;
+		if (this == other) {
+			return true;
+		}
 		return this.event.equals(other.event);
 	}
 

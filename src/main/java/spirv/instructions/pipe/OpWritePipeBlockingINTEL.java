@@ -79,6 +79,9 @@ public class OpWritePipeBlockingINTEL implements PipeInstruction, ResultType, Re
 			return false;
 		}
 		OpWritePipeBlockingINTEL other = (OpWritePipeBlockingINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

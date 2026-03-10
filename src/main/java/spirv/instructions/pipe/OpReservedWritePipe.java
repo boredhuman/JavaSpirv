@@ -86,6 +86,9 @@ public class OpReservedWritePipe implements PipeInstruction, ResultType, Result 
 			return false;
 		}
 		OpReservedWritePipe other = (OpReservedWritePipe) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

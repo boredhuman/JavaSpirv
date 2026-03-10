@@ -83,6 +83,9 @@ public class OpImageBlockMatchGatherSADQCOM implements ImageInstruction, ResultT
 			return false;
 		}
 		OpImageBlockMatchGatherSADQCOM other = (OpImageBlockMatchGatherSADQCOM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

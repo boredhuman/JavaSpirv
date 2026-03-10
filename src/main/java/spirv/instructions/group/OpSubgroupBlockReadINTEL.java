@@ -71,6 +71,9 @@ public class OpSubgroupBlockReadINTEL implements GroupInstruction, ResultType, R
 			return false;
 		}
 		OpSubgroupBlockReadINTEL other = (OpSubgroupBlockReadINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

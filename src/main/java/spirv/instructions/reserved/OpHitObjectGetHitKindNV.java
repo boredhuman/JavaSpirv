@@ -71,6 +71,9 @@ public class OpHitObjectGetHitKindNV implements ReservedInstruction, ResultType,
 			return false;
 		}
 		OpHitObjectGetHitKindNV other = (OpHitObjectGetHitKindNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

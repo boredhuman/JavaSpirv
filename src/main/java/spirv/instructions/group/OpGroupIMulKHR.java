@@ -78,6 +78,9 @@ public class OpGroupIMulKHR implements GroupInstruction, ResultType, Result {
 			return false;
 		}
 		OpGroupIMulKHR other = (OpGroupIMulKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

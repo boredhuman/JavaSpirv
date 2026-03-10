@@ -71,6 +71,9 @@ public class OpVariableLengthArrayINTEL implements Instruction, ResultType, Resu
 			return false;
 		}
 		OpVariableLengthArrayINTEL other = (OpVariableLengthArrayINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

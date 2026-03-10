@@ -71,6 +71,9 @@ public class OpSubgroupAvcRefSetBilinearFilterEnableINTEL implements Instruction
 			return false;
 		}
 		OpSubgroupAvcRefSetBilinearFilterEnableINTEL other = (OpSubgroupAvcRefSetBilinearFilterEnableINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

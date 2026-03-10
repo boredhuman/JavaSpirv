@@ -71,6 +71,9 @@ public class OpImageQueryOrder implements ImageInstruction, ResultType, Result {
 			return false;
 		}
 		OpImageQueryOrder other = (OpImageQueryOrder) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

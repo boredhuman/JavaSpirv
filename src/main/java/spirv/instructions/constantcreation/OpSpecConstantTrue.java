@@ -63,10 +63,13 @@ public class OpSpecConstantTrue implements ConstantCreationInstruction, ResultTy
 			return false;
 		}
 		OpSpecConstantTrue other = (OpSpecConstantTrue) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
-		return this.idResult != other.idResult;
+		return this.idResult == other.idResult;
 	}
 
 	@Override

@@ -71,6 +71,9 @@ public class OpHitObjectGetWorldRayDirectionNV implements ReservedInstruction, R
 			return false;
 		}
 		OpHitObjectGetWorldRayDirectionNV other = (OpHitObjectGetWorldRayDirectionNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

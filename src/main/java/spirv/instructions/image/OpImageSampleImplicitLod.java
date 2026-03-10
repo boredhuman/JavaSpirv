@@ -96,6 +96,9 @@ public class OpImageSampleImplicitLod implements ImageInstruction, ResultType, R
 			return false;
 		}
 		OpImageSampleImplicitLod other = (OpImageSampleImplicitLod) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

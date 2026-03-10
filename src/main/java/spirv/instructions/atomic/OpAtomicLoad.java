@@ -72,6 +72,9 @@ public class OpAtomicLoad implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicLoad other = (OpAtomicLoad) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

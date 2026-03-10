@@ -82,6 +82,9 @@ public class OpFragmentFetchAMD implements ReservedInstruction, ResultType, Resu
 			return false;
 		}
 		OpFragmentFetchAMD other = (OpFragmentFetchAMD) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

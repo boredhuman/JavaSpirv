@@ -63,6 +63,9 @@ public class OpSource implements DebugInstruction {
 			return false;
 		}
 		OpSource other = (OpSource) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.sourceLanguage != other.sourceLanguage) {
 			return false;
 		}

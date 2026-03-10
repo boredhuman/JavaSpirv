@@ -70,6 +70,9 @@ public class OpAliasScopeListDeclINTEL implements Instruction, Result {
 			return false;
 		}
 		OpAliasScopeListDeclINTEL other = (OpAliasScopeListDeclINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

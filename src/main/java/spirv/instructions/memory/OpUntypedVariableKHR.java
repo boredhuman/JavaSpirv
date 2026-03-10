@@ -92,6 +92,9 @@ public class OpUntypedVariableKHR implements MemoryInstruction, ResultType, Resu
 			return false;
 		}
 		OpUntypedVariableKHR other = (OpUntypedVariableKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

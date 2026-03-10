@@ -58,10 +58,13 @@ public class OpTypeUntypedPointerKHR implements TypeDeclarationInstruction, Resu
 			return false;
 		}
 		OpTypeUntypedPointerKHR other = (OpTypeUntypedPointerKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}
-		return this.storageClass != other.storageClass;
+		return this.storageClass == other.storageClass;
 	}
 
 	@Override

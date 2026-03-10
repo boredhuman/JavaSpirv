@@ -52,6 +52,9 @@ public class OpTypeSampledImage implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeSampledImage other = (OpTypeSampledImage) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

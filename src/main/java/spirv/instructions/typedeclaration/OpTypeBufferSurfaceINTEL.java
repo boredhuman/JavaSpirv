@@ -58,10 +58,13 @@ public class OpTypeBufferSurfaceINTEL implements TypeDeclarationInstruction, Res
 			return false;
 		}
 		OpTypeBufferSurfaceINTEL other = (OpTypeBufferSurfaceINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}
-		return this.accessQualifier != other.accessQualifier;
+		return this.accessQualifier == other.accessQualifier;
 	}
 
 	@Override

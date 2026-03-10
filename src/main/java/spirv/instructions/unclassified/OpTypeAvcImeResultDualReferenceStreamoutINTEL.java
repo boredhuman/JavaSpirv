@@ -54,7 +54,10 @@ public class OpTypeAvcImeResultDualReferenceStreamoutINTEL implements Instructio
 			return false;
 		}
 		OpTypeAvcImeResultDualReferenceStreamoutINTEL other = (OpTypeAvcImeResultDualReferenceStreamoutINTEL) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

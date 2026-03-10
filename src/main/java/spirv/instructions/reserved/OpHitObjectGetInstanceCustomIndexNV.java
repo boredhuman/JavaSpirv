@@ -71,6 +71,9 @@ public class OpHitObjectGetInstanceCustomIndexNV implements ReservedInstruction,
 			return false;
 		}
 		OpHitObjectGetInstanceCustomIndexNV other = (OpHitObjectGetInstanceCustomIndexNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

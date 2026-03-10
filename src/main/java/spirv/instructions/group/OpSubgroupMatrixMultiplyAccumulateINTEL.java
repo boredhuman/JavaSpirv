@@ -94,6 +94,9 @@ public class OpSubgroupMatrixMultiplyAccumulateINTEL implements GroupInstruction
 			return false;
 		}
 		OpSubgroupMatrixMultiplyAccumulateINTEL other = (OpSubgroupMatrixMultiplyAccumulateINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

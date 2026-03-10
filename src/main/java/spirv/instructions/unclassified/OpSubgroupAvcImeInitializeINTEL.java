@@ -77,6 +77,9 @@ public class OpSubgroupAvcImeInitializeINTEL implements Instruction, ResultType,
 			return false;
 		}
 		OpSubgroupAvcImeInitializeINTEL other = (OpSubgroupAvcImeInitializeINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

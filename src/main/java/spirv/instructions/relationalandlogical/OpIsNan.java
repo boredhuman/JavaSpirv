@@ -66,6 +66,9 @@ public class OpIsNan implements RelationalandLogicalInstruction, ResultType, Res
 			return false;
 		}
 		OpIsNan other = (OpIsNan) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

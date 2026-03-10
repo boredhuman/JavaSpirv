@@ -74,6 +74,9 @@ public class OpRayQueryGetIntersectionSpherePositionNV implements ReservedInstru
 			return false;
 		}
 		OpRayQueryGetIntersectionSpherePositionNV other = (OpRayQueryGetIntersectionSpherePositionNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

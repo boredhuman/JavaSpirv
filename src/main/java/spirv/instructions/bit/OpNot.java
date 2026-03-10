@@ -66,6 +66,9 @@ public class OpNot implements BitInstruction, ResultType, Result {
 			return false;
 		}
 		OpNot other = (OpNot) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

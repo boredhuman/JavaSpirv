@@ -59,6 +59,9 @@ public class OpEntryPoint implements ModeSettingInstruction {
 			return false;
 		}
 		OpEntryPoint other = (OpEntryPoint) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.executionModel != other.executionModel) {
 			return false;
 		}

@@ -71,6 +71,9 @@ public class OpConvertFToBF16INTEL implements ConversionInstruction, ResultType,
 			return false;
 		}
 		OpConvertFToBF16INTEL other = (OpConvertFToBF16INTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

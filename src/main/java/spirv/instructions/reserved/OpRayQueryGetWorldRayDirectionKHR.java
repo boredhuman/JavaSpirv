@@ -76,6 +76,9 @@ public class OpRayQueryGetWorldRayDirectionKHR implements ReservedInstruction, R
 			return false;
 		}
 		OpRayQueryGetWorldRayDirectionKHR other = (OpRayQueryGetWorldRayDirectionKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

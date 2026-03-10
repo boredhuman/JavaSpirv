@@ -60,6 +60,9 @@ public class OpStore implements MemoryInstruction {
 			return false;
 		}
 		OpStore other = (OpStore) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}

@@ -41,6 +41,9 @@ public class OpSourceContinued implements DebugInstruction {
 			return false;
 		}
 		OpSourceContinued other = (OpSourceContinued) o;
+		if (this == other) {
+			return true;
+		}
 		return this.continuedSource.equals(other.continuedSource);
 	}
 

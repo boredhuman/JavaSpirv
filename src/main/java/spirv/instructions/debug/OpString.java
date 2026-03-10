@@ -55,6 +55,9 @@ public class OpString implements DebugInstruction, Result {
 			return false;
 		}
 		OpString other = (OpString) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

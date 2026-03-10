@@ -52,6 +52,9 @@ public class OpMaskedScatterINTEL implements MemoryInstruction {
 			return false;
 		}
 		OpMaskedScatterINTEL other = (OpMaskedScatterINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.inputVector.equals(other.inputVector)) {
 			return false;
 		}

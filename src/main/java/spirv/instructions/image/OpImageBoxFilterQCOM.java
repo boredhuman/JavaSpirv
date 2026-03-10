@@ -77,6 +77,9 @@ public class OpImageBoxFilterQCOM implements ImageInstruction, ResultType, Resul
 			return false;
 		}
 		OpImageBoxFilterQCOM other = (OpImageBoxFilterQCOM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

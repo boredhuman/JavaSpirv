@@ -66,6 +66,9 @@ public class OpConvertFToS implements ConversionInstruction, ResultType, Result 
 			return false;
 		}
 		OpConvertFToS other = (OpConvertFToS) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

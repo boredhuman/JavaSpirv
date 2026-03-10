@@ -80,6 +80,9 @@ public class OpExtInst implements ExtensionInstruction, ResultType, Result {
 			return false;
 		}
 		OpExtInst other = (OpExtInst) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

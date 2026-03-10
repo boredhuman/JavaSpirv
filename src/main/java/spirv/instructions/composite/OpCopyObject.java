@@ -66,6 +66,9 @@ public class OpCopyObject implements CompositeInstruction, ResultType, Result {
 			return false;
 		}
 		OpCopyObject other = (OpCopyObject) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

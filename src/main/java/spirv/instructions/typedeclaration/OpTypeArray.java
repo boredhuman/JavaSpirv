@@ -55,6 +55,9 @@ public class OpTypeArray implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeArray other = (OpTypeArray) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

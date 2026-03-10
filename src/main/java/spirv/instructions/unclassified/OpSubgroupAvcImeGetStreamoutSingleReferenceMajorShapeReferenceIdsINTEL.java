@@ -74,6 +74,9 @@ public class OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsIN
 			return false;
 		}
 		OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL other = (OpSubgroupAvcImeGetStreamoutSingleReferenceMajorShapeReferenceIdsINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

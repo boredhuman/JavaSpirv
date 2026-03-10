@@ -75,6 +75,9 @@ public class OpUntypedPrefetchKHR implements MemoryInstruction {
 			return false;
 		}
 		OpUntypedPrefetchKHR other = (OpUntypedPrefetchKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointerType.equals(other.pointerType)) {
 			return false;
 		}

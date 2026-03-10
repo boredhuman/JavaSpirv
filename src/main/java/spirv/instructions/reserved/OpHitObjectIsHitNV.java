@@ -71,6 +71,9 @@ public class OpHitObjectIsHitNV implements ReservedInstruction, ResultType, Resu
 			return false;
 		}
 		OpHitObjectIsHitNV other = (OpHitObjectIsHitNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

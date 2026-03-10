@@ -63,6 +63,9 @@ public class OpReorderThreadWithHitObjectNV implements ReservedInstruction {
 			return false;
 		}
 		OpReorderThreadWithHitObjectNV other = (OpReorderThreadWithHitObjectNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.hitObject.equals(other.hitObject)) {
 			return false;
 		}

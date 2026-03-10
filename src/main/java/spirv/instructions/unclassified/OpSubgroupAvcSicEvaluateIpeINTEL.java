@@ -74,6 +74,9 @@ public class OpSubgroupAvcSicEvaluateIpeINTEL implements Instruction, ResultType
 			return false;
 		}
 		OpSubgroupAvcSicEvaluateIpeINTEL other = (OpSubgroupAvcSicEvaluateIpeINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

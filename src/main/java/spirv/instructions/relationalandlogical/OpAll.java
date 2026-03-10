@@ -66,6 +66,9 @@ public class OpAll implements RelationalandLogicalInstruction, ResultType, Resul
 			return false;
 		}
 		OpAll other = (OpAll) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -74,6 +74,9 @@ public class OpArrayLength implements MemoryInstruction, ResultType, Result {
 			return false;
 		}
 		OpArrayLength other = (OpArrayLength) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -83,7 +86,7 @@ public class OpArrayLength implements MemoryInstruction, ResultType, Result {
 		if (!this.structure.equals(other.structure)) {
 			return false;
 		}
-		return this.arrayMember != other.arrayMember;
+		return this.arrayMember == other.arrayMember;
 	}
 
 	@Override

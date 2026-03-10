@@ -92,6 +92,9 @@ public class OpSubgroupAvcBmeInitializeINTEL implements Instruction, ResultType,
 			return false;
 		}
 		OpSubgroupAvcBmeInitializeINTEL other = (OpSubgroupAvcBmeInitializeINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

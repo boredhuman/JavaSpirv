@@ -83,6 +83,9 @@ public class OpGetKernelNDrangeSubGroupCount implements DeviceSideEnqueueInstruc
 			return false;
 		}
 		OpGetKernelNDrangeSubGroupCount other = (OpGetKernelNDrangeSubGroupCount) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

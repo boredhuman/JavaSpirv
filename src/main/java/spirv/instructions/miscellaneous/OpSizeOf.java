@@ -71,6 +71,9 @@ public class OpSizeOf implements MiscellaneousInstruction, ResultType, Result {
 			return false;
 		}
 		OpSizeOf other = (OpSizeOf) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

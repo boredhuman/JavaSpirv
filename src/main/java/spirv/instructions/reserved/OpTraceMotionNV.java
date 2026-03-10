@@ -81,6 +81,9 @@ public class OpTraceMotionNV implements ReservedInstruction {
 			return false;
 		}
 		OpTraceMotionNV other = (OpTraceMotionNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.accel.equals(other.accel)) {
 			return false;
 		}

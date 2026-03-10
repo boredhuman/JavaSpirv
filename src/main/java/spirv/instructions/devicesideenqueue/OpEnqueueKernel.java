@@ -109,6 +109,9 @@ public class OpEnqueueKernel implements DeviceSideEnqueueInstruction, ResultType
 			return false;
 		}
 		OpEnqueueKernel other = (OpEnqueueKernel) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

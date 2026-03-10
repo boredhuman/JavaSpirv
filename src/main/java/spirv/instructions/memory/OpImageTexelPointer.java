@@ -72,6 +72,9 @@ public class OpImageTexelPointer implements MemoryInstruction, ResultType, Resul
 			return false;
 		}
 		OpImageTexelPointer other = (OpImageTexelPointer) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

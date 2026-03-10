@@ -75,6 +75,9 @@ public class OpAtomicUMax implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicUMax other = (OpAtomicUMax) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

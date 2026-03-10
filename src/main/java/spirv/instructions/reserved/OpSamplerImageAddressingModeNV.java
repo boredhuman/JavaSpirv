@@ -43,7 +43,10 @@ public class OpSamplerImageAddressingModeNV implements ReservedInstruction {
 			return false;
 		}
 		OpSamplerImageAddressingModeNV other = (OpSamplerImageAddressingModeNV) o;
-		return this.bitWidth != other.bitWidth;
+		if (this == other) {
+			return true;
+		}
+		return this.bitWidth == other.bitWidth;
 	}
 
 	@Override

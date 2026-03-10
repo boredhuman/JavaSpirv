@@ -77,6 +77,9 @@ public class OpUntypedArrayLengthKHR implements MemoryInstruction, ResultType, R
 			return false;
 		}
 		OpUntypedArrayLengthKHR other = (OpUntypedArrayLengthKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -89,7 +92,7 @@ public class OpUntypedArrayLengthKHR implements MemoryInstruction, ResultType, R
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}
-		return this.arrayMember != other.arrayMember;
+		return this.arrayMember == other.arrayMember;
 	}
 
 	@Override

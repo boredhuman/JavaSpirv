@@ -71,6 +71,9 @@ public class OpSubgroupAvcImeGetSingleReferenceStreaminINTEL implements Instruct
 			return false;
 		}
 		OpSubgroupAvcImeGetSingleReferenceStreaminINTEL other = (OpSubgroupAvcImeGetSingleReferenceStreaminINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -79,6 +79,9 @@ public class OpReadPipeBlockingINTEL implements PipeInstruction, ResultType, Res
 			return false;
 		}
 		OpReadPipeBlockingINTEL other = (OpReadPipeBlockingINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

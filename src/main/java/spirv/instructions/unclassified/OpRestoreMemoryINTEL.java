@@ -43,6 +43,9 @@ public class OpRestoreMemoryINTEL implements Instruction {
 			return false;
 		}
 		OpRestoreMemoryINTEL other = (OpRestoreMemoryINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		return this.ptr.equals(other.ptr);
 	}
 

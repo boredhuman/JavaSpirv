@@ -72,6 +72,9 @@ public class OpVectorInsertDynamic implements CompositeInstruction, ResultType, 
 			return false;
 		}
 		OpVectorInsertDynamic other = (OpVectorInsertDynamic) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

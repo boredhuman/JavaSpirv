@@ -60,6 +60,9 @@ public class OpTypeCooperativeVectorNV implements TypeDeclarationInstruction, Re
 			return false;
 		}
 		OpTypeCooperativeVectorNV other = (OpTypeCooperativeVectorNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

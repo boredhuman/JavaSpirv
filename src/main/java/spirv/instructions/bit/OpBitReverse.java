@@ -71,6 +71,9 @@ public class OpBitReverse implements BitInstruction, ResultType, Result {
 			return false;
 		}
 		OpBitReverse other = (OpBitReverse) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

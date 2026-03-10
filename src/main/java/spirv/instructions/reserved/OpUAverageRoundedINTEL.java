@@ -74,6 +74,9 @@ public class OpUAverageRoundedINTEL implements ReservedInstruction, ResultType, 
 			return false;
 		}
 		OpUAverageRoundedINTEL other = (OpUAverageRoundedINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

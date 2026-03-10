@@ -69,6 +69,9 @@ public class OpSLessThanEqual implements RelationalandLogicalInstruction, Result
 			return false;
 		}
 		OpSLessThanEqual other = (OpSLessThanEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

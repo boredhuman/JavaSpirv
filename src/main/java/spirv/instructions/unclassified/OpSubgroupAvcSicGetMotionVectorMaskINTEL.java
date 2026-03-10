@@ -74,6 +74,9 @@ public class OpSubgroupAvcSicGetMotionVectorMaskINTEL implements Instruction, Re
 			return false;
 		}
 		OpSubgroupAvcSicGetMotionVectorMaskINTEL other = (OpSubgroupAvcSicGetMotionVectorMaskINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

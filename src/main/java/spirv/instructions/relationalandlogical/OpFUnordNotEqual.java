@@ -69,6 +69,9 @@ public class OpFUnordNotEqual implements RelationalandLogicalInstruction, Result
 			return false;
 		}
 		OpFUnordNotEqual other = (OpFUnordNotEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

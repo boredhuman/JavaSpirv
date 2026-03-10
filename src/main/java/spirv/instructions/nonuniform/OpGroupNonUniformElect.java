@@ -71,6 +71,9 @@ public class OpGroupNonUniformElect implements NonUniformInstruction, ResultType
 			return false;
 		}
 		OpGroupNonUniformElect other = (OpGroupNonUniformElect) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

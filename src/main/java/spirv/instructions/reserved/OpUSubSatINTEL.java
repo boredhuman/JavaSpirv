@@ -74,6 +74,9 @@ public class OpUSubSatINTEL implements ReservedInstruction, ResultType, Result {
 			return false;
 		}
 		OpUSubSatINTEL other = (OpUSubSatINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

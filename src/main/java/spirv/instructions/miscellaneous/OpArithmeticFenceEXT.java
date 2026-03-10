@@ -71,6 +71,9 @@ public class OpArithmeticFenceEXT implements MiscellaneousInstruction, ResultTyp
 			return false;
 		}
 		OpArithmeticFenceEXT other = (OpArithmeticFenceEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

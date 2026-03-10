@@ -79,6 +79,9 @@ public class OpStencilAttachmentReadEXT implements ImageInstruction, ResultType,
 			return false;
 		}
 		OpStencilAttachmentReadEXT other = (OpStencilAttachmentReadEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

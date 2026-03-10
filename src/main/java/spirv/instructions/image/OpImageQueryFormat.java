@@ -71,6 +71,9 @@ public class OpImageQueryFormat implements ImageInstruction, ResultType, Result 
 			return false;
 		}
 		OpImageQueryFormat other = (OpImageQueryFormat) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

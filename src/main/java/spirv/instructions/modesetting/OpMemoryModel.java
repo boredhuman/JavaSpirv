@@ -43,10 +43,13 @@ public class OpMemoryModel implements ModeSettingInstruction {
 			return false;
 		}
 		OpMemoryModel other = (OpMemoryModel) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.addressingModel != other.addressingModel) {
 			return false;
 		}
-		return this.memoryModel != other.memoryModel;
+		return this.memoryModel == other.memoryModel;
 	}
 
 	@Override

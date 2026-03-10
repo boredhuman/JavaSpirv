@@ -71,6 +71,9 @@ public class OpImageQueryLevels implements ImageInstruction, ResultType, Result 
 			return false;
 		}
 		OpImageQueryLevels other = (OpImageQueryLevels) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

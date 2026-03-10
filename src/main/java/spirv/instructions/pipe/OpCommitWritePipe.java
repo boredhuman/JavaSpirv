@@ -52,6 +52,9 @@ public class OpCommitWritePipe implements PipeInstruction {
 			return false;
 		}
 		OpCommitWritePipe other = (OpCommitWritePipe) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pipe.equals(other.pipe)) {
 			return false;
 		}

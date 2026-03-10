@@ -75,6 +75,9 @@ public class OpAtomicSMax implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicSMax other = (OpAtomicSMax) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

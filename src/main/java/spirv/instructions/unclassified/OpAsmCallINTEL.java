@@ -82,6 +82,9 @@ public class OpAsmCallINTEL implements Instruction, ResultType, Result {
 			return false;
 		}
 		OpAsmCallINTEL other = (OpAsmCallINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

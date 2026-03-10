@@ -39,7 +39,10 @@ public class OpCapability implements ModeSettingInstruction {
 			return false;
 		}
 		OpCapability other = (OpCapability) o;
-		return this.capability != other.capability;
+		if (this == other) {
+			return true;
+		}
+		return this.capability == other.capability;
 	}
 
 	@Override

@@ -69,6 +69,9 @@ public class OpFOrdEqual implements RelationalandLogicalInstruction, ResultType,
 			return false;
 		}
 		OpFOrdEqual other = (OpFOrdEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

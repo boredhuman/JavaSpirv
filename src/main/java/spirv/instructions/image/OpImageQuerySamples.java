@@ -71,6 +71,9 @@ public class OpImageQuerySamples implements ImageInstruction, ResultType, Result
 			return false;
 		}
 		OpImageQuerySamples other = (OpImageQuerySamples) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

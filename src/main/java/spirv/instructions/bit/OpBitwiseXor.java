@@ -69,6 +69,9 @@ public class OpBitwiseXor implements BitInstruction, ResultType, Result {
 			return false;
 		}
 		OpBitwiseXor other = (OpBitwiseXor) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

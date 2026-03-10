@@ -69,6 +69,9 @@ public class OpFOrdGreaterThanEqual implements RelationalandLogicalInstruction, 
 			return false;
 		}
 		OpFOrdGreaterThanEqual other = (OpFOrdGreaterThanEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

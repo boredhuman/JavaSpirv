@@ -74,6 +74,9 @@ public class OpSubgroupAvcImeGetBorderReachedINTEL implements Instruction, Resul
 			return false;
 		}
 		OpSubgroupAvcImeGetBorderReachedINTEL other = (OpSubgroupAvcImeGetBorderReachedINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

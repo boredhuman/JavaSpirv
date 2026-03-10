@@ -74,6 +74,9 @@ public class OpSubgroupAvcImeRefWindowSizeINTEL implements Instruction, ResultTy
 			return false;
 		}
 		OpSubgroupAvcImeRefWindowSizeINTEL other = (OpSubgroupAvcImeRefWindowSizeINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

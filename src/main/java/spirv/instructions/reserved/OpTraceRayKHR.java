@@ -78,6 +78,9 @@ public class OpTraceRayKHR implements ReservedInstruction {
 			return false;
 		}
 		OpTraceRayKHR other = (OpTraceRayKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.accel.equals(other.accel)) {
 			return false;
 		}

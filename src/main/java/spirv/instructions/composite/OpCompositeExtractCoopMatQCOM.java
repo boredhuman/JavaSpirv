@@ -71,6 +71,9 @@ public class OpCompositeExtractCoopMatQCOM implements CompositeInstruction, Resu
 			return false;
 		}
 		OpCompositeExtractCoopMatQCOM other = (OpCompositeExtractCoopMatQCOM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

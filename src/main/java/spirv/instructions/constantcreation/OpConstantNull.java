@@ -63,10 +63,13 @@ public class OpConstantNull implements ConstantCreationInstruction, ResultType, 
 			return false;
 		}
 		OpConstantNull other = (OpConstantNull) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
-		return this.idResult != other.idResult;
+		return this.idResult == other.idResult;
 	}
 
 	@Override

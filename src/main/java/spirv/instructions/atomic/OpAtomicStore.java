@@ -47,6 +47,9 @@ public class OpAtomicStore implements AtomicInstruction {
 			return false;
 		}
 		OpAtomicStore other = (OpAtomicStore) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}

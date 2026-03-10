@@ -82,6 +82,9 @@ public class OpTensorLayoutSetDimensionNV implements ReservedInstruction, Result
 			return false;
 		}
 		OpTensorLayoutSetDimensionNV other = (OpTensorLayoutSetDimensionNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -57,6 +57,9 @@ public class OpTypeNodePayloadArrayAMDX implements ReservedInstruction, Result {
 			return false;
 		}
 		OpTypeNodePayloadArrayAMDX other = (OpTypeNodePayloadArrayAMDX) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

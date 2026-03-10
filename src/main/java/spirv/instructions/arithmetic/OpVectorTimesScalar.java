@@ -69,6 +69,9 @@ public class OpVectorTimesScalar implements ArithmeticInstruction, ResultType, R
 			return false;
 		}
 		OpVectorTimesScalar other = (OpVectorTimesScalar) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

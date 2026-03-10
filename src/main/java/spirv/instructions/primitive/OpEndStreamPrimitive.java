@@ -43,6 +43,9 @@ public class OpEndStreamPrimitive implements PrimitiveInstruction {
 			return false;
 		}
 		OpEndStreamPrimitive other = (OpEndStreamPrimitive) o;
+		if (this == other) {
+			return true;
+		}
 		return this.stream.equals(other.stream);
 	}
 

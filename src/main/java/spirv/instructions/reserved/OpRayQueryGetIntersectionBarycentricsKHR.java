@@ -79,6 +79,9 @@ public class OpRayQueryGetIntersectionBarycentricsKHR implements ReservedInstruc
 			return false;
 		}
 		OpRayQueryGetIntersectionBarycentricsKHR other = (OpRayQueryGetIntersectionBarycentricsKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -69,6 +69,9 @@ public class OpFUnordLessThanEqual implements RelationalandLogicalInstruction, R
 			return false;
 		}
 		OpFUnordLessThanEqual other = (OpFUnordLessThanEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

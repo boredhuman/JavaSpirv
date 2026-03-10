@@ -76,6 +76,9 @@ public class OpRayQueryGetWorldRayOriginKHR implements ReservedInstruction, Resu
 			return false;
 		}
 		OpRayQueryGetWorldRayOriginKHR other = (OpRayQueryGetWorldRayOriginKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -54,6 +54,9 @@ public class OpTaskSequenceAsyncINTEL implements ReservedInstruction {
 			return false;
 		}
 		OpTaskSequenceAsyncINTEL other = (OpTaskSequenceAsyncINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.sequence.equals(other.sequence)) {
 			return false;
 		}

@@ -74,6 +74,9 @@ public class OpRayQueryGetIntersectionLSSHitValueNV implements ReservedInstructi
 			return false;
 		}
 		OpRayQueryGetIntersectionLSSHitValueNV other = (OpRayQueryGetIntersectionLSSHitValueNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

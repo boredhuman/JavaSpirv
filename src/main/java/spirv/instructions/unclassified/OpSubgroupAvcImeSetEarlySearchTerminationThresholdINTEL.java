@@ -74,6 +74,9 @@ public class OpSubgroupAvcImeSetEarlySearchTerminationThresholdINTEL implements 
 			return false;
 		}
 		OpSubgroupAvcImeSetEarlySearchTerminationThresholdINTEL other = (OpSubgroupAvcImeSetEarlySearchTerminationThresholdINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -79,6 +79,9 @@ public class OpRayQueryGetIntersectionObjectRayOriginKHR implements ReservedInst
 			return false;
 		}
 		OpRayQueryGetIntersectionObjectRayOriginKHR other = (OpRayQueryGetIntersectionObjectRayOriginKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

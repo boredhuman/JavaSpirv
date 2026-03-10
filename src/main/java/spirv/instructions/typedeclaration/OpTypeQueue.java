@@ -54,7 +54,10 @@ public class OpTypeQueue implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeQueue other = (OpTypeQueue) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

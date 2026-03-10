@@ -89,6 +89,9 @@ public class OpGroupNonUniformLogicalAnd implements NonUniformInstruction, Resul
 			return false;
 		}
 		OpGroupNonUniformLogicalAnd other = (OpGroupNonUniformLogicalAnd) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

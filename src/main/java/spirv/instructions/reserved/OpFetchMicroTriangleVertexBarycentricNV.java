@@ -83,6 +83,9 @@ public class OpFetchMicroTriangleVertexBarycentricNV implements ReservedInstruct
 			return false;
 		}
 		OpFetchMicroTriangleVertexBarycentricNV other = (OpFetchMicroTriangleVertexBarycentricNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

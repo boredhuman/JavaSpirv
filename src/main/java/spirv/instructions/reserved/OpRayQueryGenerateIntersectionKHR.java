@@ -51,6 +51,9 @@ public class OpRayQueryGenerateIntersectionKHR implements ReservedInstruction {
 			return false;
 		}
 		OpRayQueryGenerateIntersectionKHR other = (OpRayQueryGenerateIntersectionKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.rayQuery.equals(other.rayQuery)) {
 			return false;
 		}

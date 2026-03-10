@@ -74,6 +74,9 @@ public class OpRayQueryGetIntersectionTriangleVertexPositionsKHR implements Rese
 			return false;
 		}
 		OpRayQueryGetIntersectionTriangleVertexPositionsKHR other = (OpRayQueryGetIntersectionTriangleVertexPositionsKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

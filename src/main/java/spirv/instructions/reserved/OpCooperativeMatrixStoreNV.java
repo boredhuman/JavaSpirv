@@ -76,6 +76,9 @@ public class OpCooperativeMatrixStoreNV implements ReservedInstruction {
 			return false;
 		}
 		OpCooperativeMatrixStoreNV other = (OpCooperativeMatrixStoreNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}

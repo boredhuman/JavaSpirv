@@ -74,6 +74,9 @@ public class OpSubgroupAvcMceSetInterDirectionPenaltyINTEL implements Instructio
 			return false;
 		}
 		OpSubgroupAvcMceSetInterDirectionPenaltyINTEL other = (OpSubgroupAvcMceSetInterDirectionPenaltyINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -71,6 +71,9 @@ public class OpDPdyCoarse implements DerivativeInstruction, ResultType, Result {
 			return false;
 		}
 		OpDPdyCoarse other = (OpDPdyCoarse) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -82,6 +82,9 @@ public class OpTensorLayoutSliceNV implements ReservedInstruction, ResultType, R
 			return false;
 		}
 		OpTensorLayoutSliceNV other = (OpTensorLayoutSliceNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

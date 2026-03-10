@@ -71,6 +71,9 @@ public class OpConvertUToImageNV implements ReservedInstruction, ResultType, Res
 			return false;
 		}
 		OpConvertUToImageNV other = (OpConvertUToImageNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -51,6 +51,9 @@ public class OpExecuteCallableKHR implements ReservedInstruction {
 			return false;
 		}
 		OpExecuteCallableKHR other = (OpExecuteCallableKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.sbtIndex.equals(other.sbtIndex)) {
 			return false;
 		}

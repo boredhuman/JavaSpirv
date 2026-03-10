@@ -71,6 +71,9 @@ public class OpConvertImageToUNV implements ReservedInstruction, ResultType, Res
 			return false;
 		}
 		OpConvertImageToUNV other = (OpConvertImageToUNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

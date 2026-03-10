@@ -79,6 +79,9 @@ public class OpRayQueryGetIntersectionGeometryIndexKHR implements ReservedInstru
 			return false;
 		}
 		OpRayQueryGetIntersectionGeometryIndexKHR other = (OpRayQueryGetIntersectionGeometryIndexKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

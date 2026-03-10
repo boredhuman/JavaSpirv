@@ -69,6 +69,9 @@ public class OpSampledImage implements ImageInstruction, ResultType, Result {
 			return false;
 		}
 		OpSampledImage other = (OpSampledImage) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

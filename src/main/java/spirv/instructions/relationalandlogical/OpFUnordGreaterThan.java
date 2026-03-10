@@ -69,6 +69,9 @@ public class OpFUnordGreaterThan implements RelationalandLogicalInstruction, Res
 			return false;
 		}
 		OpFUnordGreaterThan other = (OpFUnordGreaterThan) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -41,6 +41,9 @@ public class OpExtension implements ExtensionInstruction {
 			return false;
 		}
 		OpExtension other = (OpExtension) o;
+		if (this == other) {
+			return true;
+		}
 		return this.name.equals(other.name);
 	}
 

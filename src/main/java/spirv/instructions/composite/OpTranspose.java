@@ -71,6 +71,9 @@ public class OpTranspose implements CompositeInstruction, ResultType, Result {
 			return false;
 		}
 		OpTranspose other = (OpTranspose) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

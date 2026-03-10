@@ -79,6 +79,9 @@ public class OpReportIntersectionKHR implements ReservedInstruction, ResultType,
 			return false;
 		}
 		OpReportIntersectionKHR other = (OpReportIntersectionKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

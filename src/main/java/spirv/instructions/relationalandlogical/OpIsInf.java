@@ -66,6 +66,9 @@ public class OpIsInf implements RelationalandLogicalInstruction, ResultType, Res
 			return false;
 		}
 		OpIsInf other = (OpIsInf) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

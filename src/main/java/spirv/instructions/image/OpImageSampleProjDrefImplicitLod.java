@@ -99,6 +99,9 @@ public class OpImageSampleProjDrefImplicitLod implements ImageInstruction, Resul
 			return false;
 		}
 		OpImageSampleProjDrefImplicitLod other = (OpImageSampleProjDrefImplicitLod) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

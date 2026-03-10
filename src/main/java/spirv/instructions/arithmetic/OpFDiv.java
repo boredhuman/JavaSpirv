@@ -69,6 +69,9 @@ public class OpFDiv implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpFDiv other = (OpFDiv) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

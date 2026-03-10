@@ -71,6 +71,9 @@ public class OpCrossWorkgroupCastToPtrINTEL implements Instruction, ResultType, 
 			return false;
 		}
 		OpCrossWorkgroupCastToPtrINTEL other = (OpCrossWorkgroupCastToPtrINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

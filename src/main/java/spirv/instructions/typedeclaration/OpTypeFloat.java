@@ -64,6 +64,9 @@ public class OpTypeFloat implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeFloat other = (OpTypeFloat) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

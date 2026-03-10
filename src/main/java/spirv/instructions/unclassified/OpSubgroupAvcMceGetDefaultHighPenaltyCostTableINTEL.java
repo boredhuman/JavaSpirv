@@ -68,10 +68,13 @@ public class OpSubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL implements Inst
 			return false;
 		}
 		OpSubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL other = (OpSubgroupAvcMceGetDefaultHighPenaltyCostTableINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
-		return this.idResult != other.idResult;
+		return this.idResult == other.idResult;
 	}
 
 	@Override

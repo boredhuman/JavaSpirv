@@ -86,6 +86,9 @@ public class OpAtomicCompareExchangeWeak implements AtomicInstruction, ResultTyp
 			return false;
 		}
 		OpAtomicCompareExchangeWeak other = (OpAtomicCompareExchangeWeak) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

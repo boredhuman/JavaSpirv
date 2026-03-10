@@ -46,10 +46,13 @@ public class OpLifetimeStart implements ControlFlowInstruction {
 			return false;
 		}
 		OpLifetimeStart other = (OpLifetimeStart) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}
-		return this.size != other.size;
+		return this.size == other.size;
 	}
 
 	@Override

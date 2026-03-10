@@ -66,6 +66,14 @@ public class LoadTest {
 
 		List<SpirvBinary> loadedBinaries = spirvBinaries.stream().parallel().map(SpirvBinaryLoader::loadBinary).collect(Collectors.toList());
 
+		// just makes sure equals function is generated properly
+		System.out.println("Checking equals correctness");
+		loadedBinaries.forEach(e -> {
+			if (!e.equals(e)) {
+				throw new RuntimeException();
+			}
+		});
+
 		System.out.println("Testing conversion to module");
 
 		List<SpirvModule> modules = loadedBinaries.stream().parallel().map(SpirvModule::new).collect(Collectors.toList());

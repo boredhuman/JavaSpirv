@@ -71,13 +71,16 @@ public class OpGraphConstantARM implements GraphInstruction, ResultType, Result 
 			return false;
 		}
 		OpGraphConstantARM other = (OpGraphConstantARM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}
-		return this.graphConstantId != other.graphConstantId;
+		return this.graphConstantId == other.graphConstantId;
 	}
 
 	@Override

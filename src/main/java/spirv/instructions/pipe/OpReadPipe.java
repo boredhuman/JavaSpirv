@@ -80,6 +80,9 @@ public class OpReadPipe implements PipeInstruction, ResultType, Result {
 			return false;
 		}
 		OpReadPipe other = (OpReadPipe) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

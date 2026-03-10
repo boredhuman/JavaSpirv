@@ -48,6 +48,9 @@ public class OpRayQueryConfirmIntersectionKHR implements ReservedInstruction {
 			return false;
 		}
 		OpRayQueryConfirmIntersectionKHR other = (OpRayQueryConfirmIntersectionKHR) o;
+		if (this == other) {
+			return true;
+		}
 		return this.rayQuery.equals(other.rayQuery);
 	}
 

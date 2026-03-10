@@ -55,6 +55,9 @@ public class OpSwitch implements ControlFlowInstruction {
 			return false;
 		}
 		OpSwitch other = (OpSwitch) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.selector.equals(other.selector)) {
 			return false;
 		}

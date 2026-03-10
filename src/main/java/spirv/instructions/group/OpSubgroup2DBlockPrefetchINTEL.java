@@ -67,6 +67,9 @@ public class OpSubgroup2DBlockPrefetchINTEL implements GroupInstruction {
 			return false;
 		}
 		OpSubgroup2DBlockPrefetchINTEL other = (OpSubgroup2DBlockPrefetchINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.elementSize.equals(other.elementSize)) {
 			return false;
 		}

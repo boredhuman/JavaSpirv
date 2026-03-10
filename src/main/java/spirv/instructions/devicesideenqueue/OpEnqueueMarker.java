@@ -80,6 +80,9 @@ public class OpEnqueueMarker implements DeviceSideEnqueueInstruction, ResultType
 			return false;
 		}
 		OpEnqueueMarker other = (OpEnqueueMarker) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

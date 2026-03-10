@@ -78,6 +78,9 @@ public class OpVariable implements MemoryInstruction, ResultType, Result {
 			return false;
 		}
 		OpVariable other = (OpVariable) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

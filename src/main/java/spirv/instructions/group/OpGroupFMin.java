@@ -78,6 +78,9 @@ public class OpGroupFMin implements GroupInstruction, ResultType, Result {
 			return false;
 		}
 		OpGroupFMin other = (OpGroupFMin) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

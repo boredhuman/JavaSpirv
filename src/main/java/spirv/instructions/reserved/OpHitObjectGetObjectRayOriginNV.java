@@ -71,6 +71,9 @@ public class OpHitObjectGetObjectRayOriginNV implements ReservedInstruction, Res
 			return false;
 		}
 		OpHitObjectGetObjectRayOriginNV other = (OpHitObjectGetObjectRayOriginNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

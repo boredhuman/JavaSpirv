@@ -80,6 +80,9 @@ public class OpSubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL implement
 			return false;
 		}
 		OpSubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL other = (OpSubgroupAvcSicEvaluateWithMultiReferenceInterlacedINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

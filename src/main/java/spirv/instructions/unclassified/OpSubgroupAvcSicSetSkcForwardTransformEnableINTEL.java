@@ -74,6 +74,9 @@ public class OpSubgroupAvcSicSetSkcForwardTransformEnableINTEL implements Instru
 			return false;
 		}
 		OpSubgroupAvcSicSetSkcForwardTransformEnableINTEL other = (OpSubgroupAvcSicSetSkcForwardTransformEnableINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

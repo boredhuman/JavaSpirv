@@ -54,7 +54,10 @@ public class OpTypeTaskSequenceINTEL implements TypeDeclarationInstruction, Resu
 			return false;
 		}
 		OpTypeTaskSequenceINTEL other = (OpTypeTaskSequenceINTEL) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

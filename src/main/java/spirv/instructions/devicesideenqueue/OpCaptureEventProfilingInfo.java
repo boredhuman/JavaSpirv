@@ -49,6 +49,9 @@ public class OpCaptureEventProfilingInfo implements DeviceSideEnqueueInstruction
 			return false;
 		}
 		OpCaptureEventProfilingInfo other = (OpCaptureEventProfilingInfo) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.event.equals(other.event)) {
 			return false;
 		}

@@ -76,6 +76,9 @@ public class OpRayQueryGetIntersectionCandidateAABBOpaqueKHR implements Reserved
 			return false;
 		}
 		OpRayQueryGetIntersectionCandidateAABBOpaqueKHR other = (OpRayQueryGetIntersectionCandidateAABBOpaqueKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

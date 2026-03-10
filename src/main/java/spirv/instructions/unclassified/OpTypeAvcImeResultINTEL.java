@@ -54,7 +54,10 @@ public class OpTypeAvcImeResultINTEL implements Instruction, Result {
 			return false;
 		}
 		OpTypeAvcImeResultINTEL other = (OpTypeAvcImeResultINTEL) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

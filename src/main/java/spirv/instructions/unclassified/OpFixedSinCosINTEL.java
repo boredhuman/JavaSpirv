@@ -86,6 +86,9 @@ public class OpFixedSinCosINTEL implements Instruction, ResultType, Result {
 			return false;
 		}
 		OpFixedSinCosINTEL other = (OpFixedSinCosINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -107,7 +110,7 @@ public class OpFixedSinCosINTEL implements Instruction, ResultType, Result {
 		if (this.q != other.q) {
 			return false;
 		}
-		return this.o != other.o;
+		return this.o == other.o;
 	}
 
 	@Override

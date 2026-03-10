@@ -59,7 +59,10 @@ public class OpTypeRayQueryKHR implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeRayQueryKHR other = (OpTypeRayQueryKHR) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

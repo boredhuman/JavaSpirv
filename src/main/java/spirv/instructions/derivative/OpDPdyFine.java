@@ -71,6 +71,9 @@ public class OpDPdyFine implements DerivativeInstruction, ResultType, Result {
 			return false;
 		}
 		OpDPdyFine other = (OpDPdyFine) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

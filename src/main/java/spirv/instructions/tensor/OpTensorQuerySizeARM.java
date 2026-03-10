@@ -74,6 +74,9 @@ public class OpTensorQuerySizeARM implements TensorInstruction, ResultType, Resu
 			return false;
 		}
 		OpTensorQuerySizeARM other = (OpTensorQuerySizeARM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

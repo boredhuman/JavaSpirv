@@ -80,6 +80,9 @@ public class OpSpecConstantCapabilitiesINTEL implements ConstantCreationInstruct
 			return false;
 		}
 		OpSpecConstantCapabilitiesINTEL other = (OpSpecConstantCapabilitiesINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

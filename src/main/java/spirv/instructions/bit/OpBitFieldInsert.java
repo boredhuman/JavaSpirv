@@ -80,6 +80,9 @@ public class OpBitFieldInsert implements BitInstruction, ResultType, Result {
 			return false;
 		}
 		OpBitFieldInsert other = (OpBitFieldInsert) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

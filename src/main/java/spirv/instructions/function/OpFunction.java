@@ -72,6 +72,9 @@ public class OpFunction implements FunctionInstruction, ResultType, Result {
 			return false;
 		}
 		OpFunction other = (OpFunction) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

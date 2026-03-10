@@ -77,6 +77,9 @@ public class OpGroupNonUniformQuadBroadcast implements NonUniformInstruction, Re
 			return false;
 		}
 		OpGroupNonUniformQuadBroadcast other = (OpGroupNonUniformQuadBroadcast) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

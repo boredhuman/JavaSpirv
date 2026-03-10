@@ -55,13 +55,16 @@ public class OpTypeVector implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeVector other = (OpTypeVector) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}
 		if (!this.componentType.equals(other.componentType)) {
 			return false;
 		}
-		return this.componentCount != other.componentCount;
+		return this.componentCount == other.componentCount;
 	}
 
 	@Override

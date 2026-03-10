@@ -69,6 +69,9 @@ public class OpUMod implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpUMod other = (OpUMod) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

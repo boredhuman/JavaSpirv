@@ -96,6 +96,9 @@ public class OpImageSparseFetch implements ImageInstruction, ResultType, Result 
 			return false;
 		}
 		OpImageSparseFetch other = (OpImageSparseFetch) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

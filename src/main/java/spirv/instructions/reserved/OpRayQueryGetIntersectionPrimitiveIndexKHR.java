@@ -79,6 +79,9 @@ public class OpRayQueryGetIntersectionPrimitiveIndexKHR implements ReservedInstr
 			return false;
 		}
 		OpRayQueryGetIntersectionPrimitiveIndexKHR other = (OpRayQueryGetIntersectionPrimitiveIndexKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

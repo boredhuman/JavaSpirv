@@ -89,6 +89,9 @@ public class OpGroupNonUniformFMax implements NonUniformInstruction, ResultType,
 			return false;
 		}
 		OpGroupNonUniformFMax other = (OpGroupNonUniformFMax) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

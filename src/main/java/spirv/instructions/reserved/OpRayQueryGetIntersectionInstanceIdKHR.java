@@ -79,6 +79,9 @@ public class OpRayQueryGetIntersectionInstanceIdKHR implements ReservedInstructi
 			return false;
 		}
 		OpRayQueryGetIntersectionInstanceIdKHR other = (OpRayQueryGetIntersectionInstanceIdKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

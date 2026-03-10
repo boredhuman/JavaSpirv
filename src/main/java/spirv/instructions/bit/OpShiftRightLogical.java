@@ -69,6 +69,9 @@ public class OpShiftRightLogical implements BitInstruction, ResultType, Result {
 			return false;
 		}
 		OpShiftRightLogical other = (OpShiftRightLogical) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

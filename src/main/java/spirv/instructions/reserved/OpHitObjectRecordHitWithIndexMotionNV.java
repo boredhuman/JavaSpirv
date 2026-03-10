@@ -79,6 +79,9 @@ public class OpHitObjectRecordHitWithIndexMotionNV implements ReservedInstructio
 			return false;
 		}
 		OpHitObjectRecordHitWithIndexMotionNV other = (OpHitObjectRecordHitWithIndexMotionNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.hitObject.equals(other.hitObject)) {
 			return false;
 		}

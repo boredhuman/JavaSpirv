@@ -78,6 +78,9 @@ public class OpGroupUMin implements GroupInstruction, ResultType, Result {
 			return false;
 		}
 		OpGroupUMin other = (OpGroupUMin) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

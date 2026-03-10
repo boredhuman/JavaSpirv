@@ -43,6 +43,9 @@ public class OpHitObjectRecordEmptyNV implements ReservedInstruction {
 			return false;
 		}
 		OpHitObjectRecordEmptyNV other = (OpHitObjectRecordEmptyNV) o;
+		if (this == other) {
+			return true;
+		}
 		return this.hitObject.equals(other.hitObject);
 	}
 

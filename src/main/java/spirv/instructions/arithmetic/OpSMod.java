@@ -69,6 +69,9 @@ public class OpSMod implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpSMod other = (OpSMod) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

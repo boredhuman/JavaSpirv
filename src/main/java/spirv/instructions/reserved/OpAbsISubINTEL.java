@@ -74,6 +74,9 @@ public class OpAbsISubINTEL implements ReservedInstruction, ResultType, Result {
 			return false;
 		}
 		OpAbsISubINTEL other = (OpAbsISubINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -79,6 +79,9 @@ public class OpFragmentMaskFetchAMD implements ReservedInstruction, ResultType, 
 			return false;
 		}
 		OpFragmentMaskFetchAMD other = (OpFragmentMaskFetchAMD) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

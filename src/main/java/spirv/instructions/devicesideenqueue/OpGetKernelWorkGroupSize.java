@@ -80,6 +80,9 @@ public class OpGetKernelWorkGroupSize implements DeviceSideEnqueueInstruction, R
 			return false;
 		}
 		OpGetKernelWorkGroupSize other = (OpGetKernelWorkGroupSize) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

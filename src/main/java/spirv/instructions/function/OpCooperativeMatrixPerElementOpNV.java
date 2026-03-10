@@ -85,6 +85,9 @@ public class OpCooperativeMatrixPerElementOpNV implements FunctionInstruction, R
 			return false;
 		}
 		OpCooperativeMatrixPerElementOpNV other = (OpCooperativeMatrixPerElementOpNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

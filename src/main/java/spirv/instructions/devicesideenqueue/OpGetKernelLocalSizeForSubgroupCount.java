@@ -83,6 +83,9 @@ public class OpGetKernelLocalSizeForSubgroupCount implements DeviceSideEnqueueIn
 			return false;
 		}
 		OpGetKernelLocalSizeForSubgroupCount other = (OpGetKernelLocalSizeForSubgroupCount) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

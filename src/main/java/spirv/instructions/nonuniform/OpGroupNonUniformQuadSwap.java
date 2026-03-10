@@ -77,6 +77,9 @@ public class OpGroupNonUniformQuadSwap implements NonUniformInstruction, ResultT
 			return false;
 		}
 		OpGroupNonUniformQuadSwap other = (OpGroupNonUniformQuadSwap) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

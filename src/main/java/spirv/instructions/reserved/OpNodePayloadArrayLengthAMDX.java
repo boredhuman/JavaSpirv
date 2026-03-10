@@ -71,6 +71,9 @@ public class OpNodePayloadArrayLengthAMDX implements ReservedInstruction, Result
 			return false;
 		}
 		OpNodePayloadArrayLengthAMDX other = (OpNodePayloadArrayLengthAMDX) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

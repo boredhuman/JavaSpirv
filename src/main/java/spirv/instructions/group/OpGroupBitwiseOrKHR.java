@@ -78,6 +78,9 @@ public class OpGroupBitwiseOrKHR implements GroupInstruction, ResultType, Result
 			return false;
 		}
 		OpGroupBitwiseOrKHR other = (OpGroupBitwiseOrKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

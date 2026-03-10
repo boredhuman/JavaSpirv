@@ -70,6 +70,9 @@ public class OpSubgroup2DBlockLoadTransposeINTEL implements GroupInstruction {
 			return false;
 		}
 		OpSubgroup2DBlockLoadTransposeINTEL other = (OpSubgroup2DBlockLoadTransposeINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.elementSize.equals(other.elementSize)) {
 			return false;
 		}

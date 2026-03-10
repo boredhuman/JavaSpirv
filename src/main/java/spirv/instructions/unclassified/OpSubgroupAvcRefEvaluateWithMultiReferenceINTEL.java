@@ -77,6 +77,9 @@ public class OpSubgroupAvcRefEvaluateWithMultiReferenceINTEL implements Instruct
 			return false;
 		}
 		OpSubgroupAvcRefEvaluateWithMultiReferenceINTEL other = (OpSubgroupAvcRefEvaluateWithMultiReferenceINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

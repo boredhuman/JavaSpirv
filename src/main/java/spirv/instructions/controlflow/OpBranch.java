@@ -38,6 +38,9 @@ public class OpBranch implements ControlFlowInstruction {
 			return false;
 		}
 		OpBranch other = (OpBranch) o;
+		if (this == other) {
+			return true;
+		}
 		return this.targetLabel.equals(other.targetLabel);
 	}
 

@@ -79,6 +79,9 @@ public class OpRayQueryGetIntersectionObjectRayDirectionKHR implements ReservedI
 			return false;
 		}
 		OpRayQueryGetIntersectionObjectRayDirectionKHR other = (OpRayQueryGetIntersectionObjectRayDirectionKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

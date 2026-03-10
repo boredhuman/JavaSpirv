@@ -71,6 +71,9 @@ public class OpCooperativeMatrixTransposeNV implements ConversionInstruction, Re
 			return false;
 		}
 		OpCooperativeMatrixTransposeNV other = (OpCooperativeMatrixTransposeNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

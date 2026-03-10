@@ -47,6 +47,9 @@ public class OpMemberName implements DebugInstruction {
 			return false;
 		}
 		OpMemberName other = (OpMemberName) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.type.equals(other.type)) {
 			return false;
 		}

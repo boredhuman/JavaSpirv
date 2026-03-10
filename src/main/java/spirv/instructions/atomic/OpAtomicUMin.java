@@ -75,6 +75,9 @@ public class OpAtomicUMin implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicUMin other = (OpAtomicUMin) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -55,13 +55,16 @@ public class OpTypeInt implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeInt other = (OpTypeInt) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}
 		if (this.width != other.width) {
 			return false;
 		}
-		return this.signedness != other.signedness;
+		return this.signedness == other.signedness;
 	}
 
 	@Override

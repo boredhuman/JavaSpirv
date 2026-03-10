@@ -46,6 +46,9 @@ public class OpHitObjectExecuteShaderNV implements ReservedInstruction {
 			return false;
 		}
 		OpHitObjectExecuteShaderNV other = (OpHitObjectExecuteShaderNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.hitObject.equals(other.hitObject)) {
 			return false;
 		}

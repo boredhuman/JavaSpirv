@@ -74,6 +74,9 @@ public class OpIAddSatINTEL implements ReservedInstruction, ResultType, Result {
 			return false;
 		}
 		OpIAddSatINTEL other = (OpIAddSatINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

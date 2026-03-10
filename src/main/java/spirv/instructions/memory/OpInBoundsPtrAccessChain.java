@@ -85,6 +85,9 @@ public class OpInBoundsPtrAccessChain implements MemoryInstruction, ResultType, 
 			return false;
 		}
 		OpInBoundsPtrAccessChain other = (OpInBoundsPtrAccessChain) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

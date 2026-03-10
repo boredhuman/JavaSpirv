@@ -71,6 +71,9 @@ public class OpHitObjectGetSphereRadiusNV implements ReservedInstruction, Result
 			return false;
 		}
 		OpHitObjectGetSphereRadiusNV other = (OpHitObjectGetSphereRadiusNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -89,6 +89,9 @@ public class OpGroupNonUniformFMul implements NonUniformInstruction, ResultType,
 			return false;
 		}
 		OpGroupNonUniformFMul other = (OpGroupNonUniformFMul) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

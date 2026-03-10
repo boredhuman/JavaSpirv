@@ -86,6 +86,9 @@ public class OpReservedReadPipe implements PipeInstruction, ResultType, Result {
 			return false;
 		}
 		OpReservedReadPipe other = (OpReservedReadPipe) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

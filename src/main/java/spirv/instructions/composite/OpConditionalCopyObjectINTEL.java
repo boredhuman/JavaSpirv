@@ -79,6 +79,9 @@ public class OpConditionalCopyObjectINTEL implements CompositeInstruction, Resul
 			return false;
 		}
 		OpConditionalCopyObjectINTEL other = (OpConditionalCopyObjectINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

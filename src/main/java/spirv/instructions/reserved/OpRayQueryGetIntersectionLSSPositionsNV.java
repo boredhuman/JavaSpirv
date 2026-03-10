@@ -74,6 +74,9 @@ public class OpRayQueryGetIntersectionLSSPositionsNV implements ReservedInstruct
 			return false;
 		}
 		OpRayQueryGetIntersectionLSSPositionsNV other = (OpRayQueryGetIntersectionLSSPositionsNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

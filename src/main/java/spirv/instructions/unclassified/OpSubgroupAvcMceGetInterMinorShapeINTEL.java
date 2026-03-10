@@ -71,6 +71,9 @@ public class OpSubgroupAvcMceGetInterMinorShapeINTEL implements Instruction, Res
 			return false;
 		}
 		OpSubgroupAvcMceGetInterMinorShapeINTEL other = (OpSubgroupAvcMceGetInterMinorShapeINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

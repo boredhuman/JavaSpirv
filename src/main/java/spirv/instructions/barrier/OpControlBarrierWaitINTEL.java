@@ -49,6 +49,9 @@ public class OpControlBarrierWaitINTEL implements BarrierInstruction {
 			return false;
 		}
 		OpControlBarrierWaitINTEL other = (OpControlBarrierWaitINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.execution.equals(other.execution)) {
 			return false;
 		}

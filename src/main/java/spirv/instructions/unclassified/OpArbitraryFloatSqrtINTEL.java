@@ -86,6 +86,9 @@ public class OpArbitraryFloatSqrtINTEL implements Instruction, ResultType, Resul
 			return false;
 		}
 		OpArbitraryFloatSqrtINTEL other = (OpArbitraryFloatSqrtINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -107,7 +110,7 @@ public class OpArbitraryFloatSqrtINTEL implements Instruction, ResultType, Resul
 		if (this.rounding != other.rounding) {
 			return false;
 		}
-		return this.accuracy != other.accuracy;
+		return this.accuracy == other.accuracy;
 	}
 
 	@Override

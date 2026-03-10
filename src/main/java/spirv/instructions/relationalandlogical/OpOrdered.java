@@ -74,6 +74,9 @@ public class OpOrdered implements RelationalandLogicalInstruction, ResultType, R
 			return false;
 		}
 		OpOrdered other = (OpOrdered) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

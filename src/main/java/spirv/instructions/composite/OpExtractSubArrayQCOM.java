@@ -74,6 +74,9 @@ public class OpExtractSubArrayQCOM implements CompositeInstruction, ResultType, 
 			return false;
 		}
 		OpExtractSubArrayQCOM other = (OpExtractSubArrayQCOM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -86,6 +86,9 @@ public class OpArbitraryFloatLog1pINTEL implements Instruction, ResultType, Resu
 			return false;
 		}
 		OpArbitraryFloatLog1pINTEL other = (OpArbitraryFloatLog1pINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -107,7 +110,7 @@ public class OpArbitraryFloatLog1pINTEL implements Instruction, ResultType, Resu
 		if (this.rounding != other.rounding) {
 			return false;
 		}
-		return this.accuracy != other.accuracy;
+		return this.accuracy == other.accuracy;
 	}
 
 	@Override

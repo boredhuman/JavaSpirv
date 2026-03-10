@@ -44,13 +44,16 @@ public class OpLine implements DebugInstruction {
 			return false;
 		}
 		OpLine other = (OpLine) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.file.equals(other.file)) {
 			return false;
 		}
 		if (this.line != other.line) {
 			return false;
 		}
-		return this.column != other.column;
+		return this.column == other.column;
 	}
 
 	@Override

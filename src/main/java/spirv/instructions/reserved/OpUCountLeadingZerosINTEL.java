@@ -71,6 +71,9 @@ public class OpUCountLeadingZerosINTEL implements ReservedInstruction, ResultTyp
 			return false;
 		}
 		OpUCountLeadingZerosINTEL other = (OpUCountLeadingZerosINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

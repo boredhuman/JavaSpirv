@@ -66,6 +66,9 @@ public class OpSConvert implements ConversionInstruction, ResultType, Result {
 			return false;
 		}
 		OpSConvert other = (OpSConvert) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

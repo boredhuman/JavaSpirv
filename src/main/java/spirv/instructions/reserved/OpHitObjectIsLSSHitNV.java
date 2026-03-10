@@ -71,6 +71,9 @@ public class OpHitObjectIsLSSHitNV implements ReservedInstruction, ResultType, R
 			return false;
 		}
 		OpHitObjectIsLSSHitNV other = (OpHitObjectIsLSSHitNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

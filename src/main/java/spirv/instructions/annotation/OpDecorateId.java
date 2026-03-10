@@ -55,6 +55,9 @@ public class OpDecorateId implements AnnotationInstruction {
 			return false;
 		}
 		OpDecorateId other = (OpDecorateId) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.target.equals(other.target)) {
 			return false;
 		}

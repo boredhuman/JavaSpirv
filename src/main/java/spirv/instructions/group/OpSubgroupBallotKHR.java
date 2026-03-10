@@ -76,6 +76,9 @@ public class OpSubgroupBallotKHR implements GroupInstruction, ResultType, Result
 			return false;
 		}
 		OpSubgroupBallotKHR other = (OpSubgroupBallotKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

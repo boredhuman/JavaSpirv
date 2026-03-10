@@ -69,6 +69,9 @@ public class OpIEqual implements RelationalandLogicalInstruction, ResultType, Re
 			return false;
 		}
 		OpIEqual other = (OpIEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -49,6 +49,9 @@ public class OpGroupDecorate implements AnnotationInstruction {
 			return false;
 		}
 		OpGroupDecorate other = (OpGroupDecorate) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.decorationGroup.equals(other.decorationGroup)) {
 			return false;
 		}

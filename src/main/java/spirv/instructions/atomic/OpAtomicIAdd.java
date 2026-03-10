@@ -75,6 +75,9 @@ public class OpAtomicIAdd implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicIAdd other = (OpAtomicIAdd) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

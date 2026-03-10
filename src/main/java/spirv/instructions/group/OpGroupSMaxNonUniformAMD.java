@@ -83,6 +83,9 @@ public class OpGroupSMaxNonUniformAMD implements GroupInstruction, ResultType, R
 			return false;
 		}
 		OpGroupSMaxNonUniformAMD other = (OpGroupSMaxNonUniformAMD) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

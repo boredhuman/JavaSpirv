@@ -77,6 +77,9 @@ public class OpSubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL impl
 			return false;
 		}
 		OpSubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL other = (OpSubgroupAvcMceSetDualReferenceInterlacedFieldPolaritiesINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -44,6 +44,9 @@ public class OpControlBarrier implements BarrierInstruction {
 			return false;
 		}
 		OpControlBarrier other = (OpControlBarrier) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.execution.equals(other.execution)) {
 			return false;
 		}

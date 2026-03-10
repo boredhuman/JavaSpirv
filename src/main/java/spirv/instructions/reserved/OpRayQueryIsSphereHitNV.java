@@ -74,6 +74,9 @@ public class OpRayQueryIsSphereHitNV implements ReservedInstruction, ResultType,
 			return false;
 		}
 		OpRayQueryIsSphereHitNV other = (OpRayQueryIsSphereHitNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

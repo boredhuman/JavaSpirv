@@ -77,6 +77,9 @@ public class OpGetMaxPipePackets implements PipeInstruction, ResultType, Result 
 			return false;
 		}
 		OpGetMaxPipePackets other = (OpGetMaxPipePackets) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

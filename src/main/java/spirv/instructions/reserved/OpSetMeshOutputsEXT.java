@@ -46,6 +46,9 @@ public class OpSetMeshOutputsEXT implements ReservedInstruction {
 			return false;
 		}
 		OpSetMeshOutputsEXT other = (OpSetMeshOutputsEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.vertexCount.equals(other.vertexCount)) {
 			return false;
 		}

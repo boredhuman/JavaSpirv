@@ -69,6 +69,9 @@ public class OpULessThan implements RelationalandLogicalInstruction, ResultType,
 			return false;
 		}
 		OpULessThan other = (OpULessThan) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

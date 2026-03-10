@@ -79,6 +79,9 @@ public class OpRayQueryGetIntersectionObjectToWorldKHR implements ReservedInstru
 			return false;
 		}
 		OpRayQueryGetIntersectionObjectToWorldKHR other = (OpRayQueryGetIntersectionObjectToWorldKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

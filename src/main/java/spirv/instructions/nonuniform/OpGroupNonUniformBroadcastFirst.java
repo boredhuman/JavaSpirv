@@ -74,6 +74,9 @@ public class OpGroupNonUniformBroadcastFirst implements NonUniformInstruction, R
 			return false;
 		}
 		OpGroupNonUniformBroadcastFirst other = (OpGroupNonUniformBroadcastFirst) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -69,6 +69,9 @@ public class OpSRem implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpSRem other = (OpSRem) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

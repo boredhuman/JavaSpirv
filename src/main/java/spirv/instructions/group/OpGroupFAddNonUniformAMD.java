@@ -83,6 +83,9 @@ public class OpGroupFAddNonUniformAMD implements GroupInstruction, ResultType, R
 			return false;
 		}
 		OpGroupFAddNonUniformAMD other = (OpGroupFAddNonUniformAMD) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

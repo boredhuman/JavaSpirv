@@ -85,6 +85,9 @@ public class OpLoad implements MemoryInstruction, ResultType, Result {
 			return false;
 		}
 		OpLoad other = (OpLoad) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

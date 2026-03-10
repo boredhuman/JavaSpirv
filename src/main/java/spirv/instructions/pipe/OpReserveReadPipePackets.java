@@ -80,6 +80,9 @@ public class OpReserveReadPipePackets implements PipeInstruction, ResultType, Re
 			return false;
 		}
 		OpReserveReadPipePackets other = (OpReserveReadPipePackets) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

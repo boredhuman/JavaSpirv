@@ -69,6 +69,9 @@ public class OpISub implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpISub other = (OpISub) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

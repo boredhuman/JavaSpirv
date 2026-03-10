@@ -66,6 +66,9 @@ public class OpSNegate implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpSNegate other = (OpSNegate) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

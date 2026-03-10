@@ -71,6 +71,9 @@ public class OpSubgroupAvcMceGetMotionVectorsINTEL implements Instruction, Resul
 			return false;
 		}
 		OpSubgroupAvcMceGetMotionVectorsINTEL other = (OpSubgroupAvcMceGetMotionVectorsINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

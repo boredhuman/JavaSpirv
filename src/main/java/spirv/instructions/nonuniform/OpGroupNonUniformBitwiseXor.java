@@ -89,6 +89,9 @@ public class OpGroupNonUniformBitwiseXor implements NonUniformInstruction, Resul
 			return false;
 		}
 		OpGroupNonUniformBitwiseXor other = (OpGroupNonUniformBitwiseXor) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

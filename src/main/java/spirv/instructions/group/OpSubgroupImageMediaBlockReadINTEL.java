@@ -80,6 +80,9 @@ public class OpSubgroupImageMediaBlockReadINTEL implements GroupInstruction, Res
 			return false;
 		}
 		OpSubgroupImageMediaBlockReadINTEL other = (OpSubgroupImageMediaBlockReadINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

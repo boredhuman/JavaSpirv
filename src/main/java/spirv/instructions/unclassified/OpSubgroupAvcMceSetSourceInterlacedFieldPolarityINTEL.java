@@ -74,6 +74,9 @@ public class OpSubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL implements In
 			return false;
 		}
 		OpSubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL other = (OpSubgroupAvcMceSetSourceInterlacedFieldPolarityINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

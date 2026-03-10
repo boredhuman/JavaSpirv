@@ -82,6 +82,9 @@ public class OpGraphInputARM implements GraphInstruction, ResultType, Result {
 			return false;
 		}
 		OpGraphInputARM other = (OpGraphInputARM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

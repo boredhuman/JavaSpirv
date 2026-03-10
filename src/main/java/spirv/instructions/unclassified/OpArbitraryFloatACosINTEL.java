@@ -86,6 +86,9 @@ public class OpArbitraryFloatACosINTEL implements Instruction, ResultType, Resul
 			return false;
 		}
 		OpArbitraryFloatACosINTEL other = (OpArbitraryFloatACosINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -107,7 +110,7 @@ public class OpArbitraryFloatACosINTEL implements Instruction, ResultType, Resul
 		if (this.roundingMode != other.roundingMode) {
 			return false;
 		}
-		return this.roundingAccuracy != other.roundingAccuracy;
+		return this.roundingAccuracy == other.roundingAccuracy;
 	}
 
 	@Override

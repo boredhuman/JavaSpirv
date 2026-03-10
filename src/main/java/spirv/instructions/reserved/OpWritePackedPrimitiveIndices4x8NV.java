@@ -51,6 +51,9 @@ public class OpWritePackedPrimitiveIndices4x8NV implements ReservedInstruction {
 			return false;
 		}
 		OpWritePackedPrimitiveIndices4x8NV other = (OpWritePackedPrimitiveIndices4x8NV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.indexOffset.equals(other.indexOffset)) {
 			return false;
 		}

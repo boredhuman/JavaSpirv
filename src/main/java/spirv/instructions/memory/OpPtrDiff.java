@@ -74,6 +74,9 @@ public class OpPtrDiff implements MemoryInstruction, ResultType, Result {
 			return false;
 		}
 		OpPtrDiff other = (OpPtrDiff) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

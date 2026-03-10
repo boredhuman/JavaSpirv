@@ -65,6 +65,9 @@ public class OpSubgroupBlockPrefetchINTEL implements GroupInstruction {
 			return false;
 		}
 		OpSubgroupBlockPrefetchINTEL other = (OpSubgroupBlockPrefetchINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.ptr.equals(other.ptr)) {
 			return false;
 		}

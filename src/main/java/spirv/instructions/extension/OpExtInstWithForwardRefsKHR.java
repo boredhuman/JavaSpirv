@@ -85,6 +85,9 @@ public class OpExtInstWithForwardRefsKHR implements ExtensionInstruction, Result
 			return false;
 		}
 		OpExtInstWithForwardRefsKHR other = (OpExtInstWithForwardRefsKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

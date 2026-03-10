@@ -49,6 +49,9 @@ public class OpMemoryNamedBarrier implements BarrierInstruction {
 			return false;
 		}
 		OpMemoryNamedBarrier other = (OpMemoryNamedBarrier) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.namedBarrier.equals(other.namedBarrier)) {
 			return false;
 		}

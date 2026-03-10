@@ -60,6 +60,9 @@ public class OpSpecConstantStringAMDX implements ReservedInstruction, Result {
 			return false;
 		}
 		OpSpecConstantStringAMDX other = (OpSpecConstantStringAMDX) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

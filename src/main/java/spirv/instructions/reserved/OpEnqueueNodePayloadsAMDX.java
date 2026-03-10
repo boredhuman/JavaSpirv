@@ -43,6 +43,9 @@ public class OpEnqueueNodePayloadsAMDX implements ReservedInstruction {
 			return false;
 		}
 		OpEnqueueNodePayloadsAMDX other = (OpEnqueueNodePayloadsAMDX) o;
+		if (this == other) {
+			return true;
+		}
 		return this.payloadArray.equals(other.payloadArray);
 	}
 

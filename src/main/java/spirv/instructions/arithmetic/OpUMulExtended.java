@@ -69,6 +69,9 @@ public class OpUMulExtended implements ArithmeticInstruction, ResultType, Result
 			return false;
 		}
 		OpUMulExtended other = (OpUMulExtended) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

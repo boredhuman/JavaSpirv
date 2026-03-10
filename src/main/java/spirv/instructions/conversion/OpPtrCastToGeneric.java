@@ -71,6 +71,9 @@ public class OpPtrCastToGeneric implements ConversionInstruction, ResultType, Re
 			return false;
 		}
 		OpPtrCastToGeneric other = (OpPtrCastToGeneric) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

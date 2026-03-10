@@ -68,10 +68,13 @@ public class OpGetDefaultQueue implements DeviceSideEnqueueInstruction, ResultTy
 			return false;
 		}
 		OpGetDefaultQueue other = (OpGetDefaultQueue) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
-		return this.idResult != other.idResult;
+		return this.idResult == other.idResult;
 	}
 
 	@Override

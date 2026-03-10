@@ -74,6 +74,9 @@ public class OpSubgroupAvcImeSetWeightedSadINTEL implements Instruction, ResultT
 			return false;
 		}
 		OpSubgroupAvcImeSetWeightedSadINTEL other = (OpSubgroupAvcImeSetWeightedSadINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

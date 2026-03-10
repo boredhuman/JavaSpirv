@@ -92,6 +92,9 @@ public class OpArbitraryFloatMulINTEL implements Instruction, ResultType, Result
 			return false;
 		}
 		OpArbitraryFloatMulINTEL other = (OpArbitraryFloatMulINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -119,7 +122,7 @@ public class OpArbitraryFloatMulINTEL implements Instruction, ResultType, Result
 		if (this.rounding != other.rounding) {
 			return false;
 		}
-		return this.accuracy != other.accuracy;
+		return this.accuracy == other.accuracy;
 	}
 
 	@Override

@@ -76,6 +76,9 @@ public class OpRayQueryGetRayTMinKHR implements ReservedInstruction, ResultType,
 			return false;
 		}
 		OpRayQueryGetRayTMinKHR other = (OpRayQueryGetRayTMinKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

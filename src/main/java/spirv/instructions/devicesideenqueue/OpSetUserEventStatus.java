@@ -46,6 +46,9 @@ public class OpSetUserEventStatus implements DeviceSideEnqueueInstruction {
 			return false;
 		}
 		OpSetUserEventStatus other = (OpSetUserEventStatus) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.event.equals(other.event)) {
 			return false;
 		}

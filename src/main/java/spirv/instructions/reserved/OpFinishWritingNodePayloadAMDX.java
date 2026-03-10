@@ -71,6 +71,9 @@ public class OpFinishWritingNodePayloadAMDX implements ReservedInstruction, Resu
 			return false;
 		}
 		OpFinishWritingNodePayloadAMDX other = (OpFinishWritingNodePayloadAMDX) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

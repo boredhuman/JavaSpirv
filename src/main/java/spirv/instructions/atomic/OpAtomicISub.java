@@ -75,6 +75,9 @@ public class OpAtomicISub implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicISub other = (OpAtomicISub) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

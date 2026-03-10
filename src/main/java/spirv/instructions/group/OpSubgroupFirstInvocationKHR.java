@@ -76,6 +76,9 @@ public class OpSubgroupFirstInvocationKHR implements GroupInstruction, ResultTyp
 			return false;
 		}
 		OpSubgroupFirstInvocationKHR other = (OpSubgroupFirstInvocationKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

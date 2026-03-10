@@ -71,6 +71,9 @@ public class OpSubgroupAvcSicGetPackedIpeLumaModesINTEL implements Instruction, 
 			return false;
 		}
 		OpSubgroupAvcSicGetPackedIpeLumaModesINTEL other = (OpSubgroupAvcSicGetPackedIpeLumaModesINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

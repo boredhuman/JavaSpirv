@@ -78,6 +78,9 @@ public class OpGroupNonUniformBallotBitCount implements NonUniformInstruction, R
 			return false;
 		}
 		OpGroupNonUniformBallotBitCount other = (OpGroupNonUniformBallotBitCount) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -46,6 +46,9 @@ public class OpSubgroupBlockWriteINTEL implements GroupInstruction {
 			return false;
 		}
 		OpSubgroupBlockWriteINTEL other = (OpSubgroupBlockWriteINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.ptr.equals(other.ptr)) {
 			return false;
 		}

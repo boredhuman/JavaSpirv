@@ -77,6 +77,9 @@ public class OpGetNumPipePackets implements PipeInstruction, ResultType, Result 
 			return false;
 		}
 		OpGetNumPipePackets other = (OpGetNumPipePackets) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

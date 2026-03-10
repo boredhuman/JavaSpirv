@@ -63,10 +63,13 @@ public class OpConstantTrue implements ConstantCreationInstruction, ResultType, 
 			return false;
 		}
 		OpConstantTrue other = (OpConstantTrue) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
-		return this.idResult != other.idResult;
+		return this.idResult == other.idResult;
 	}
 
 	@Override

@@ -46,6 +46,9 @@ public class OpHitObjectGetAttributesNV implements ReservedInstruction {
 			return false;
 		}
 		OpHitObjectGetAttributesNV other = (OpHitObjectGetAttributesNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.hitObject.equals(other.hitObject)) {
 			return false;
 		}

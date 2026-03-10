@@ -80,6 +80,9 @@ public class OpCooperativeMatrixReduceNV implements ArithmeticInstruction, Resul
 			return false;
 		}
 		OpCooperativeMatrixReduceNV other = (OpCooperativeMatrixReduceNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -80,6 +80,9 @@ public class OpMaskedGatherINTEL implements MemoryInstruction, ResultType, Resul
 			return false;
 		}
 		OpMaskedGatherINTEL other = (OpMaskedGatherINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

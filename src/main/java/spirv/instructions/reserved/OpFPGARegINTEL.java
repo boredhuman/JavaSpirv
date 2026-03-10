@@ -76,6 +76,9 @@ public class OpFPGARegINTEL implements ReservedInstruction, ResultType, Result {
 			return false;
 		}
 		OpFPGARegINTEL other = (OpFPGARegINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

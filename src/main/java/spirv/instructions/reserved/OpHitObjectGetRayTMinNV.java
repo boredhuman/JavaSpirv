@@ -71,6 +71,9 @@ public class OpHitObjectGetRayTMinNV implements ReservedInstruction, ResultType,
 			return false;
 		}
 		OpHitObjectGetRayTMinNV other = (OpHitObjectGetRayTMinNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

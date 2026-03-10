@@ -71,6 +71,9 @@ public class OpSubgroupAvcRefSetBidirectionalMixDisableINTEL implements Instruct
 			return false;
 		}
 		OpSubgroupAvcRefSetBidirectionalMixDisableINTEL other = (OpSubgroupAvcRefSetBidirectionalMixDisableINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

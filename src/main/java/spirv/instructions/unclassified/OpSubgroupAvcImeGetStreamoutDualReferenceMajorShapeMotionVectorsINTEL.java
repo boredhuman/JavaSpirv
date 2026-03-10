@@ -77,6 +77,9 @@ public class OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINT
 			return false;
 		}
 		OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL other = (OpSubgroupAvcImeGetStreamoutDualReferenceMajorShapeMotionVectorsINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

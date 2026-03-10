@@ -101,6 +101,9 @@ public class OpCooperativeMatrixLoadNV implements ReservedInstruction, ResultTyp
 			return false;
 		}
 		OpCooperativeMatrixLoadNV other = (OpCooperativeMatrixLoadNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

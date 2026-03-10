@@ -49,6 +49,9 @@ public class OpCooperativeVectorReduceSumAccumulateNV implements ReservedInstruc
 			return false;
 		}
 		OpCooperativeVectorReduceSumAccumulateNV other = (OpCooperativeVectorReduceSumAccumulateNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}

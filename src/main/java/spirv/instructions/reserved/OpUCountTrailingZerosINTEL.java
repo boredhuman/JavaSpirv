@@ -71,6 +71,9 @@ public class OpUCountTrailingZerosINTEL implements ReservedInstruction, ResultTy
 			return false;
 		}
 		OpUCountTrailingZerosINTEL other = (OpUCountTrailingZerosINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

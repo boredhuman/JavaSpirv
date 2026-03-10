@@ -71,6 +71,9 @@ public class OpSubgroupAvcMceGetInterMotionVectorCountINTEL implements Instructi
 			return false;
 		}
 		OpSubgroupAvcMceGetInterMotionVectorCountINTEL other = (OpSubgroupAvcMceGetInterMotionVectorCountINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

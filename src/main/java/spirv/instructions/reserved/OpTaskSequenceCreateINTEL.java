@@ -83,6 +83,9 @@ public class OpTaskSequenceCreateINTEL implements ReservedInstruction, ResultTyp
 			return false;
 		}
 		OpTaskSequenceCreateINTEL other = (OpTaskSequenceCreateINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -101,7 +104,7 @@ public class OpTaskSequenceCreateINTEL implements ReservedInstruction, ResultTyp
 		if (this.getCapacity != other.getCapacity) {
 			return false;
 		}
-		return this.asyncCapacity != other.asyncCapacity;
+		return this.asyncCapacity == other.asyncCapacity;
 	}
 
 	@Override

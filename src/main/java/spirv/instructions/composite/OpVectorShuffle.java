@@ -80,6 +80,9 @@ public class OpVectorShuffle implements CompositeInstruction, ResultType, Result
 			return false;
 		}
 		OpVectorShuffle other = (OpVectorShuffle) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

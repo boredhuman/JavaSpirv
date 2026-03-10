@@ -71,6 +71,9 @@ public class OpSubgroupAvcMceGetInterReferenceIdsINTEL implements Instruction, R
 			return false;
 		}
 		OpSubgroupAvcMceGetInterReferenceIdsINTEL other = (OpSubgroupAvcMceGetInterReferenceIdsINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

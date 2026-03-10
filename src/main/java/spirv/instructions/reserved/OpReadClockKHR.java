@@ -71,6 +71,9 @@ public class OpReadClockKHR implements ReservedInstruction, ResultType, Result {
 			return false;
 		}
 		OpReadClockKHR other = (OpReadClockKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

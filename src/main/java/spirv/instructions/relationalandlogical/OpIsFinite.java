@@ -71,6 +71,9 @@ public class OpIsFinite implements RelationalandLogicalInstruction, ResultType, 
 			return false;
 		}
 		OpIsFinite other = (OpIsFinite) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

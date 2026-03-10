@@ -71,6 +71,9 @@ public class OpNamedBarrierInitialize implements BarrierInstruction, ResultType,
 			return false;
 		}
 		OpNamedBarrierInitialize other = (OpNamedBarrierInitialize) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

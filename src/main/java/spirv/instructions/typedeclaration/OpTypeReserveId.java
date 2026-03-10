@@ -54,7 +54,10 @@ public class OpTypeReserveId implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeReserveId other = (OpTypeReserveId) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

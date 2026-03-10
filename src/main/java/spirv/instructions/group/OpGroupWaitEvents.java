@@ -49,6 +49,9 @@ public class OpGroupWaitEvents implements GroupInstruction {
 			return false;
 		}
 		OpGroupWaitEvents other = (OpGroupWaitEvents) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.execution.equals(other.execution)) {
 			return false;
 		}

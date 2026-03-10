@@ -74,6 +74,9 @@ public class OpSubgroupImageBlockReadINTEL implements GroupInstruction, ResultTy
 			return false;
 		}
 		OpSubgroupImageBlockReadINTEL other = (OpSubgroupImageBlockReadINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

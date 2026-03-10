@@ -102,6 +102,9 @@ public class OpCooperativeMatrixLoadKHR implements MemoryInstruction, ResultType
 			return false;
 		}
 		OpCooperativeMatrixLoadKHR other = (OpCooperativeMatrixLoadKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -71,6 +71,9 @@ public class OpCompositeConstructReplicateEXT implements CompositeInstruction, R
 			return false;
 		}
 		OpCompositeConstructReplicateEXT other = (OpCompositeConstructReplicateEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

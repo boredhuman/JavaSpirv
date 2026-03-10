@@ -77,6 +77,9 @@ public class OpSubgroupAvcImeSetSingleReferenceINTEL implements Instruction, Res
 			return false;
 		}
 		OpSubgroupAvcImeSetSingleReferenceINTEL other = (OpSubgroupAvcImeSetSingleReferenceINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

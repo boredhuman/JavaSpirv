@@ -81,6 +81,9 @@ public class OpAtomicCompareExchange implements AtomicInstruction, ResultType, R
 			return false;
 		}
 		OpAtomicCompareExchange other = (OpAtomicCompareExchange) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

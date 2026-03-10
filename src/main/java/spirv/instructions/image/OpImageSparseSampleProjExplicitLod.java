@@ -91,6 +91,9 @@ public class OpImageSparseSampleProjExplicitLod implements ImageInstruction, Res
 			return false;
 		}
 		OpImageSparseSampleProjExplicitLod other = (OpImageSparseSampleProjExplicitLod) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

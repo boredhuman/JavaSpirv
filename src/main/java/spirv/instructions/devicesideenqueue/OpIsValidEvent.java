@@ -71,6 +71,9 @@ public class OpIsValidEvent implements DeviceSideEnqueueInstruction, ResultType,
 			return false;
 		}
 		OpIsValidEvent other = (OpIsValidEvent) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -76,6 +76,9 @@ public class OpCooperativeMatrixLengthNV implements ReservedInstruction, ResultT
 			return false;
 		}
 		OpCooperativeMatrixLengthNV other = (OpCooperativeMatrixLengthNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

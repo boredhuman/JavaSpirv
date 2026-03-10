@@ -74,6 +74,9 @@ public class OpSubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL implement
 			return false;
 		}
 		OpSubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL other = (OpSubgroupAvcMceGetDefaultInterMotionVectorCostTableINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

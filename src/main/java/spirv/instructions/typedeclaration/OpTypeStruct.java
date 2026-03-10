@@ -60,6 +60,9 @@ public class OpTypeStruct implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeStruct other = (OpTypeStruct) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

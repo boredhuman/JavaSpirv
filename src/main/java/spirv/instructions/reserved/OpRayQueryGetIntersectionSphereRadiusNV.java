@@ -74,6 +74,9 @@ public class OpRayQueryGetIntersectionSphereRadiusNV implements ReservedInstruct
 			return false;
 		}
 		OpRayQueryGetIntersectionSphereRadiusNV other = (OpRayQueryGetIntersectionSphereRadiusNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

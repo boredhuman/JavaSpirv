@@ -82,6 +82,9 @@ public class OpTensorLayoutSetStrideNV implements ReservedInstruction, ResultTyp
 			return false;
 		}
 		OpTensorLayoutSetStrideNV other = (OpTensorLayoutSetStrideNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

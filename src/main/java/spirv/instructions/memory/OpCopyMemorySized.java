@@ -83,6 +83,9 @@ public class OpCopyMemorySized implements MemoryInstruction {
 			return false;
 		}
 		OpCopyMemorySized other = (OpCopyMemorySized) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.target.equals(other.target)) {
 			return false;
 		}

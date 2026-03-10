@@ -91,6 +91,9 @@ public class OpUDot implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpUDot other = (OpUDot) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

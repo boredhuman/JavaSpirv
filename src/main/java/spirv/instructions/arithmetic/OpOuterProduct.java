@@ -74,6 +74,9 @@ public class OpOuterProduct implements ArithmeticInstruction, ResultType, Result
 			return false;
 		}
 		OpOuterProduct other = (OpOuterProduct) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

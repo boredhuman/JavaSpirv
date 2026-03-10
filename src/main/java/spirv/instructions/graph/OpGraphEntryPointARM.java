@@ -60,6 +60,9 @@ public class OpGraphEntryPointARM implements GraphInstruction {
 			return false;
 		}
 		OpGraphEntryPointARM other = (OpGraphEntryPointARM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.graph.equals(other.graph)) {
 			return false;
 		}

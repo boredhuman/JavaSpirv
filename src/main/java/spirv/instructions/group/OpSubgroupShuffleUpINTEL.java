@@ -77,6 +77,9 @@ public class OpSubgroupShuffleUpINTEL implements GroupInstruction, ResultType, R
 			return false;
 		}
 		OpSubgroupShuffleUpINTEL other = (OpSubgroupShuffleUpINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

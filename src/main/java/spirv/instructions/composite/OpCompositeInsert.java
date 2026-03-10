@@ -80,6 +80,9 @@ public class OpCompositeInsert implements CompositeInstruction, ResultType, Resu
 			return false;
 		}
 		OpCompositeInsert other = (OpCompositeInsert) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

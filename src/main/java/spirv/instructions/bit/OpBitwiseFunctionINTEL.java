@@ -80,6 +80,9 @@ public class OpBitwiseFunctionINTEL implements BitInstruction, ResultType, Resul
 			return false;
 		}
 		OpBitwiseFunctionINTEL other = (OpBitwiseFunctionINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -77,6 +77,9 @@ public class OpBitFieldUExtract implements BitInstruction, ResultType, Result {
 			return false;
 		}
 		OpBitFieldUExtract other = (OpBitFieldUExtract) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

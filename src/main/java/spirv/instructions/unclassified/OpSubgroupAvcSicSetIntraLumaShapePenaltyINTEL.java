@@ -74,6 +74,9 @@ public class OpSubgroupAvcSicSetIntraLumaShapePenaltyINTEL implements Instructio
 			return false;
 		}
 		OpSubgroupAvcSicSetIntraLumaShapePenaltyINTEL other = (OpSubgroupAvcSicSetIntraLumaShapePenaltyINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

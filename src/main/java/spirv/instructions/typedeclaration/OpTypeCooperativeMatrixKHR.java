@@ -69,6 +69,9 @@ public class OpTypeCooperativeMatrixKHR implements TypeDeclarationInstruction, R
 			return false;
 		}
 		OpTypeCooperativeMatrixKHR other = (OpTypeCooperativeMatrixKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

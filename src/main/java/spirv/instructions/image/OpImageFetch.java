@@ -91,6 +91,9 @@ public class OpImageFetch implements ImageInstruction, ResultType, Result {
 			return false;
 		}
 		OpImageFetch other = (OpImageFetch) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

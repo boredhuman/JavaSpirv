@@ -72,6 +72,9 @@ public class OpSelect implements RelationalandLogicalInstruction, ResultType, Re
 			return false;
 		}
 		OpSelect other = (OpSelect) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -56,6 +56,9 @@ public class OpTypePointer implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypePointer other = (OpTypePointer) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

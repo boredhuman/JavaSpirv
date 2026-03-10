@@ -80,6 +80,9 @@ public class OpAtomicFMaxEXT implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicFMaxEXT other = (OpAtomicFMaxEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

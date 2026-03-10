@@ -85,6 +85,9 @@ public class OpAsmINTEL implements Instruction, ResultType, Result {
 			return false;
 		}
 		OpAsmINTEL other = (OpAsmINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

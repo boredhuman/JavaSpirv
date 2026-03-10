@@ -71,6 +71,9 @@ public class OpConvertUToSampledImageNV implements ReservedInstruction, ResultTy
 			return false;
 		}
 		OpConvertUToSampledImageNV other = (OpConvertUToSampledImageNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

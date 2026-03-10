@@ -68,10 +68,13 @@ public class OpCreateTensorViewNV implements ReservedInstruction, ResultType, Re
 			return false;
 		}
 		OpCreateTensorViewNV other = (OpCreateTensorViewNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
-		return this.idResult != other.idResult;
+		return this.idResult == other.idResult;
 	}
 
 	@Override

@@ -99,6 +99,9 @@ public class OpImageSparseDrefGather implements ImageInstruction, ResultType, Re
 			return false;
 		}
 		OpImageSparseDrefGather other = (OpImageSparseDrefGather) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

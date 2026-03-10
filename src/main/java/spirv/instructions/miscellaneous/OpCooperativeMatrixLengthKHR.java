@@ -71,6 +71,9 @@ public class OpCooperativeMatrixLengthKHR implements MiscellaneousInstruction, R
 			return false;
 		}
 		OpCooperativeMatrixLengthKHR other = (OpCooperativeMatrixLengthKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

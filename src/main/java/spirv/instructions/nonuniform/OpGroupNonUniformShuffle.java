@@ -77,6 +77,9 @@ public class OpGroupNonUniformShuffle implements NonUniformInstruction, ResultTy
 			return false;
 		}
 		OpGroupNonUniformShuffle other = (OpGroupNonUniformShuffle) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

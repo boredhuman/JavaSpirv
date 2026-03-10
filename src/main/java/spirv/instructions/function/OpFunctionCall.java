@@ -77,6 +77,9 @@ public class OpFunctionCall implements FunctionInstruction, ResultType, Result {
 			return false;
 		}
 		OpFunctionCall other = (OpFunctionCall) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -70,6 +70,9 @@ public class OpSubgroup2DBlockStoreINTEL implements GroupInstruction {
 			return false;
 		}
 		OpSubgroup2DBlockStoreINTEL other = (OpSubgroup2DBlockStoreINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.elementSize.equals(other.elementSize)) {
 			return false;
 		}

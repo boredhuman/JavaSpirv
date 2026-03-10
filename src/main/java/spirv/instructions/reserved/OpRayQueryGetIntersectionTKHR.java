@@ -79,6 +79,9 @@ public class OpRayQueryGetIntersectionTKHR implements ReservedInstruction, Resul
 			return false;
 		}
 		OpRayQueryGetIntersectionTKHR other = (OpRayQueryGetIntersectionTKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

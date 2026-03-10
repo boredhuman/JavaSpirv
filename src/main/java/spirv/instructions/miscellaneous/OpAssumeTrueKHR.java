@@ -48,6 +48,9 @@ public class OpAssumeTrueKHR implements MiscellaneousInstruction {
 			return false;
 		}
 		OpAssumeTrueKHR other = (OpAssumeTrueKHR) o;
+		if (this == other) {
+			return true;
+		}
 		return this.condition.equals(other.condition);
 	}
 

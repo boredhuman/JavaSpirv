@@ -99,6 +99,9 @@ public class OpImageDrefGather implements ImageInstruction, ResultType, Result {
 			return false;
 		}
 		OpImageDrefGather other = (OpImageDrefGather) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

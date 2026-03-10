@@ -43,6 +43,9 @@ public class OpRetainEvent implements DeviceSideEnqueueInstruction {
 			return false;
 		}
 		OpRetainEvent other = (OpRetainEvent) o;
+		if (this == other) {
+			return true;
+		}
 		return this.event.equals(other.event);
 	}
 

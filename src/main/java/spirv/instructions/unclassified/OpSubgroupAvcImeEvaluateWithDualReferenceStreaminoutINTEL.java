@@ -83,6 +83,9 @@ public class OpSubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL implement
 			return false;
 		}
 		OpSubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL other = (OpSubgroupAvcImeEvaluateWithDualReferenceStreaminoutINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

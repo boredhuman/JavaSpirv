@@ -69,6 +69,9 @@ public class OpFMul implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpFMul other = (OpFMul) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

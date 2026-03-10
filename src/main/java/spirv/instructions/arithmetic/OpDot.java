@@ -69,6 +69,9 @@ public class OpDot implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpDot other = (OpDot) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

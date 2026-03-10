@@ -74,6 +74,9 @@ public class OpRayQueryIsLSSHitNV implements ReservedInstruction, ResultType, Re
 			return false;
 		}
 		OpRayQueryIsLSSHitNV other = (OpRayQueryIsLSSHitNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

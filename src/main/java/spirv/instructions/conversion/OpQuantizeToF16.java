@@ -66,6 +66,9 @@ public class OpQuantizeToF16 implements ConversionInstruction, ResultType, Resul
 			return false;
 		}
 		OpQuantizeToF16 other = (OpQuantizeToF16) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

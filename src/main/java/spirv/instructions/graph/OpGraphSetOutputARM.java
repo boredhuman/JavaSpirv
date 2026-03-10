@@ -57,6 +57,9 @@ public class OpGraphSetOutputARM implements GraphInstruction {
 			return false;
 		}
 		OpGraphSetOutputARM other = (OpGraphSetOutputARM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.value.equals(other.value)) {
 			return false;
 		}

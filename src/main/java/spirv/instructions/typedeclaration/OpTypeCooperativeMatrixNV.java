@@ -71,6 +71,9 @@ public class OpTypeCooperativeMatrixNV implements TypeDeclarationInstruction, Re
 			return false;
 		}
 		OpTypeCooperativeMatrixNV other = (OpTypeCooperativeMatrixNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

@@ -82,6 +82,9 @@ public class OpTensorViewSetStrideNV implements ReservedInstruction, ResultType,
 			return false;
 		}
 		OpTensorViewSetStrideNV other = (OpTensorViewSetStrideNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -51,6 +51,9 @@ public class OpSpecConstantCompositeContinuedINTEL implements ConstantCreationIn
 			return false;
 		}
 		OpSpecConstantCompositeContinuedINTEL other = (OpSpecConstantCompositeContinuedINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		return Arrays.equals(this.constituents, other.constituents);
 	}
 

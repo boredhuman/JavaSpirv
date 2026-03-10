@@ -69,6 +69,9 @@ public class OpINotEqual implements RelationalandLogicalInstruction, ResultType,
 			return false;
 		}
 		OpINotEqual other = (OpINotEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

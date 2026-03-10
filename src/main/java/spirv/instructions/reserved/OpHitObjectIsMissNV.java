@@ -71,6 +71,9 @@ public class OpHitObjectIsMissNV implements ReservedInstruction, ResultType, Res
 			return false;
 		}
 		OpHitObjectIsMissNV other = (OpHitObjectIsMissNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

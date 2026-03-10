@@ -75,6 +75,9 @@ public class OpCopyMemory implements MemoryInstruction {
 			return false;
 		}
 		OpCopyMemory other = (OpCopyMemory) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.target.equals(other.target)) {
 			return false;
 		}

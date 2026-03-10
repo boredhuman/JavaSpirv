@@ -74,6 +74,9 @@ public class OpIsNodePayloadValidAMDX implements ReservedInstruction, ResultType
 			return false;
 		}
 		OpIsNodePayloadValidAMDX other = (OpIsNodePayloadValidAMDX) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

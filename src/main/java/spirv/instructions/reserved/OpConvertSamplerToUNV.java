@@ -71,6 +71,9 @@ public class OpConvertSamplerToUNV implements ReservedInstruction, ResultType, R
 			return false;
 		}
 		OpConvertSamplerToUNV other = (OpConvertSamplerToUNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

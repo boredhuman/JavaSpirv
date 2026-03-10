@@ -74,6 +74,9 @@ public class OpGroupNonUniformBallotFindLSB implements NonUniformInstruction, Re
 			return false;
 		}
 		OpGroupNonUniformBallotFindLSB other = (OpGroupNonUniformBallotFindLSB) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

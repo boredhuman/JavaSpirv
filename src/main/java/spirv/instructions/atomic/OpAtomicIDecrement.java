@@ -72,6 +72,9 @@ public class OpAtomicIDecrement implements AtomicInstruction, ResultType, Result
 			return false;
 		}
 		OpAtomicIDecrement other = (OpAtomicIDecrement) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

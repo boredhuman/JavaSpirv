@@ -94,6 +94,9 @@ public class OpImageSampleDrefExplicitLod implements ImageInstruction, ResultTyp
 			return false;
 		}
 		OpImageSampleDrefExplicitLod other = (OpImageSampleDrefExplicitLod) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

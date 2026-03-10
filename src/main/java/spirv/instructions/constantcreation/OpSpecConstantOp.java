@@ -69,6 +69,9 @@ public class OpSpecConstantOp implements ConstantCreationInstruction, ResultType
 			return false;
 		}
 		OpSpecConstantOp other = (OpSpecConstantOp) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

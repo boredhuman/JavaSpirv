@@ -80,6 +80,9 @@ public class OpSubgroupAvcMceSetMotionVectorCostFunctionINTEL implements Instruc
 			return false;
 		}
 		OpSubgroupAvcMceSetMotionVectorCostFunctionINTEL other = (OpSubgroupAvcMceSetMotionVectorCostFunctionINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

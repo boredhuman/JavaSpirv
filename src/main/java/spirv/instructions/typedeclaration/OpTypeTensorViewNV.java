@@ -71,6 +71,9 @@ public class OpTypeTensorViewNV implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeTensorViewNV other = (OpTypeTensorViewNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

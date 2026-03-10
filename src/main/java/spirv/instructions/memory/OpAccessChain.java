@@ -77,6 +77,9 @@ public class OpAccessChain implements MemoryInstruction, ResultType, Result {
 			return false;
 		}
 		OpAccessChain other = (OpAccessChain) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

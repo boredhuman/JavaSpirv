@@ -71,6 +71,9 @@ public class OpConvertBF16ToFINTEL implements ConversionInstruction, ResultType,
 			return false;
 		}
 		OpConvertBF16ToFINTEL other = (OpConvertBF16ToFINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

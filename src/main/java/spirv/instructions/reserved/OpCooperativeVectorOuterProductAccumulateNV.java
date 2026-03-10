@@ -69,6 +69,9 @@ public class OpCooperativeVectorOuterProductAccumulateNV implements ReservedInst
 			return false;
 		}
 		OpCooperativeVectorOuterProductAccumulateNV other = (OpCooperativeVectorOuterProductAccumulateNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}

@@ -50,6 +50,9 @@ public class OpExecutionModeId implements ModeSettingInstruction {
 			return false;
 		}
 		OpExecutionModeId other = (OpExecutionModeId) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.entryPoint.equals(other.entryPoint)) {
 			return false;
 		}

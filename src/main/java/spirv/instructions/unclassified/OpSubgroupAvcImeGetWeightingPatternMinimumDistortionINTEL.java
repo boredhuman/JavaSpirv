@@ -71,6 +71,9 @@ public class OpSubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL implement
 			return false;
 		}
 		OpSubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL other = (OpSubgroupAvcImeGetWeightingPatternMinimumDistortionINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

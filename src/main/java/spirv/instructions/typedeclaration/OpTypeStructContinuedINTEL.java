@@ -51,6 +51,9 @@ public class OpTypeStructContinuedINTEL implements TypeDeclarationInstruction {
 			return false;
 		}
 		OpTypeStructContinuedINTEL other = (OpTypeStructContinuedINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		return Arrays.equals(this.member0Type, other.member0Type);
 	}
 

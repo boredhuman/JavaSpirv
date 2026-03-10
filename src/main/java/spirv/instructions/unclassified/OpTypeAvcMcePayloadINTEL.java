@@ -54,7 +54,10 @@ public class OpTypeAvcMcePayloadINTEL implements Instruction, Result {
 			return false;
 		}
 		OpTypeAvcMcePayloadINTEL other = (OpTypeAvcMcePayloadINTEL) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

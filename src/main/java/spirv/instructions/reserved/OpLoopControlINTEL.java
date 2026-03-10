@@ -56,6 +56,9 @@ public class OpLoopControlINTEL implements ReservedInstruction {
 			return false;
 		}
 		OpLoopControlINTEL other = (OpLoopControlINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		return Arrays.equals(this.loopControlParameters, other.loopControlParameters);
 	}
 

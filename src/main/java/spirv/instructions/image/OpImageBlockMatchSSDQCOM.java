@@ -83,6 +83,9 @@ public class OpImageBlockMatchSSDQCOM implements ImageInstruction, ResultType, R
 			return false;
 		}
 		OpImageBlockMatchSSDQCOM other = (OpImageBlockMatchSSDQCOM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

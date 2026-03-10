@@ -71,6 +71,9 @@ public class OpSubgroupAvcMceSetAcOnlyHaarINTEL implements Instruction, ResultTy
 			return false;
 		}
 		OpSubgroupAvcMceSetAcOnlyHaarINTEL other = (OpSubgroupAvcMceSetAcOnlyHaarINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

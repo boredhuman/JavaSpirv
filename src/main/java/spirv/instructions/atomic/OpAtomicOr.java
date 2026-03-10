@@ -75,6 +75,9 @@ public class OpAtomicOr implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicOr other = (OpAtomicOr) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

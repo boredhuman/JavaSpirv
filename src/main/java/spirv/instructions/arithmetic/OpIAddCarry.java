@@ -69,6 +69,9 @@ public class OpIAddCarry implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpIAddCarry other = (OpIAddCarry) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

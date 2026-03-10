@@ -55,6 +55,9 @@ public class OpGroupCommitReadPipe implements PipeInstruction {
 			return false;
 		}
 		OpGroupCommitReadPipe other = (OpGroupCommitReadPipe) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.execution.equals(other.execution)) {
 			return false;
 		}

@@ -82,6 +82,9 @@ public class OpColorAttachmentReadEXT implements ImageInstruction, ResultType, R
 			return false;
 		}
 		OpColorAttachmentReadEXT other = (OpColorAttachmentReadEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

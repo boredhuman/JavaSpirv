@@ -79,6 +79,9 @@ public class OpExpectKHR implements MiscellaneousInstruction, ResultType, Result
 			return false;
 		}
 		OpExpectKHR other = (OpExpectKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

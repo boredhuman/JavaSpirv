@@ -74,6 +74,9 @@ public class OpSubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL implements Ins
 			return false;
 		}
 		OpSubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL other = (OpSubgroupAvcMceGetDefaultInterDirectionPenaltyINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

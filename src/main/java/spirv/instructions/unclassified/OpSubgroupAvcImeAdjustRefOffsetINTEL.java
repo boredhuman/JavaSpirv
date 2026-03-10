@@ -80,6 +80,9 @@ public class OpSubgroupAvcImeAdjustRefOffsetINTEL implements Instruction, Result
 			return false;
 		}
 		OpSubgroupAvcImeAdjustRefOffsetINTEL other = (OpSubgroupAvcImeAdjustRefOffsetINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

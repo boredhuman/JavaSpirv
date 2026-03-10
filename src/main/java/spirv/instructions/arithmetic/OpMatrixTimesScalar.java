@@ -74,6 +74,9 @@ public class OpMatrixTimesScalar implements ArithmeticInstruction, ResultType, R
 			return false;
 		}
 		OpMatrixTimesScalar other = (OpMatrixTimesScalar) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

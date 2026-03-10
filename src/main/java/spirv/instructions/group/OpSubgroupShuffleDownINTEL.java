@@ -77,6 +77,9 @@ public class OpSubgroupShuffleDownINTEL implements GroupInstruction, ResultType,
 			return false;
 		}
 		OpSubgroupShuffleDownINTEL other = (OpSubgroupShuffleDownINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

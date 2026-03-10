@@ -69,6 +69,9 @@ public class OpFOrdNotEqual implements RelationalandLogicalInstruction, ResultTy
 			return false;
 		}
 		OpFOrdNotEqual other = (OpFOrdNotEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

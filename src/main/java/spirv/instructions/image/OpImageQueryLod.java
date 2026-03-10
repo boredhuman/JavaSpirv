@@ -74,6 +74,9 @@ public class OpImageQueryLod implements ImageInstruction, ResultType, Result {
 			return false;
 		}
 		OpImageQueryLod other = (OpImageQueryLod) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

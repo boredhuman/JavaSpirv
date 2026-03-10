@@ -47,10 +47,13 @@ public class OpTypeForwardPointer implements TypeDeclarationInstruction {
 			return false;
 		}
 		OpTypeForwardPointer other = (OpTypeForwardPointer) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointerType.equals(other.pointerType)) {
 			return false;
 		}
-		return this.storageClass != other.storageClass;
+		return this.storageClass == other.storageClass;
 	}
 
 	@Override

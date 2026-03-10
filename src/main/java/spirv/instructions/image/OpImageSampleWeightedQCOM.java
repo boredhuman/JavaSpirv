@@ -77,6 +77,9 @@ public class OpImageSampleWeightedQCOM implements ImageInstruction, ResultType, 
 			return false;
 		}
 		OpImageSampleWeightedQCOM other = (OpImageSampleWeightedQCOM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

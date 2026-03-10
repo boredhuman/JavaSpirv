@@ -59,7 +59,10 @@ public class OpTypeAccelerationStructureKHR implements TypeDeclarationInstructio
 			return false;
 		}
 		OpTypeAccelerationStructureKHR other = (OpTypeAccelerationStructureKHR) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

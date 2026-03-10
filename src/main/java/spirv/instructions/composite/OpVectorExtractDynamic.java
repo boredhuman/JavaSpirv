@@ -69,6 +69,9 @@ public class OpVectorExtractDynamic implements CompositeInstruction, ResultType,
 			return false;
 		}
 		OpVectorExtractDynamic other = (OpVectorExtractDynamic) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

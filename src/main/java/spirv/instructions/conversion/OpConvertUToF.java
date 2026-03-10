@@ -66,6 +66,9 @@ public class OpConvertUToF implements ConversionInstruction, ResultType, Result 
 			return false;
 		}
 		OpConvertUToF other = (OpConvertUToF) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

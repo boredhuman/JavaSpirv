@@ -92,6 +92,9 @@ public class OpArbitraryFloatATan2INTEL implements Instruction, ResultType, Resu
 			return false;
 		}
 		OpArbitraryFloatATan2INTEL other = (OpArbitraryFloatATan2INTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -119,7 +122,7 @@ public class OpArbitraryFloatATan2INTEL implements Instruction, ResultType, Resu
 		if (this.rounding != other.rounding) {
 			return false;
 		}
-		return this.accuracy != other.accuracy;
+		return this.accuracy == other.accuracy;
 	}
 
 	@Override

@@ -66,6 +66,9 @@ public class OpConvertFToU implements ConversionInstruction, ResultType, Result 
 			return false;
 		}
 		OpConvertFToU other = (OpConvertFToU) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

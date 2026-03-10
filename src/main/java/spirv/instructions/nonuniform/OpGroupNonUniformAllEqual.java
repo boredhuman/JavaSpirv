@@ -74,6 +74,9 @@ public class OpGroupNonUniformAllEqual implements NonUniformInstruction, ResultT
 			return false;
 		}
 		OpGroupNonUniformAllEqual other = (OpGroupNonUniformAllEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

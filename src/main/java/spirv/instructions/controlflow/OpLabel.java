@@ -49,7 +49,10 @@ public class OpLabel implements ControlFlowInstruction, Result {
 			return false;
 		}
 		OpLabel other = (OpLabel) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

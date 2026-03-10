@@ -74,6 +74,9 @@ public class OpSpecConstantComposite implements ConstantCreationInstruction, Res
 			return false;
 		}
 		OpSpecConstantComposite other = (OpSpecConstantComposite) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

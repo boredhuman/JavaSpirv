@@ -74,6 +74,9 @@ public class OpSubgroupAvcImeSetMaxMotionVectorCountINTEL implements Instruction
 			return false;
 		}
 		OpSubgroupAvcImeSetMaxMotionVectorCountINTEL other = (OpSubgroupAvcImeSetMaxMotionVectorCountINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

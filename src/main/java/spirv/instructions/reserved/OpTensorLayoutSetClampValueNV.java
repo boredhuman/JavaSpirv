@@ -74,6 +74,9 @@ public class OpTensorLayoutSetClampValueNV implements ReservedInstruction, Resul
 			return false;
 		}
 		OpTensorLayoutSetClampValueNV other = (OpTensorLayoutSetClampValueNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

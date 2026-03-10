@@ -55,6 +55,9 @@ public class OpDecorateString implements AnnotationInstruction {
 			return false;
 		}
 		OpDecorateString other = (OpDecorateString) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.target.equals(other.target)) {
 			return false;
 		}

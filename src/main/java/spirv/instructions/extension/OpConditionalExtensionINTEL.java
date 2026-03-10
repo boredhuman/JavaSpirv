@@ -49,6 +49,9 @@ public class OpConditionalExtensionINTEL implements ExtensionInstruction {
 			return false;
 		}
 		OpConditionalExtensionINTEL other = (OpConditionalExtensionINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.condition.equals(other.condition)) {
 			return false;
 		}

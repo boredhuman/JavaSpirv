@@ -55,6 +55,9 @@ public class OpSubgroupImageMediaBlockWriteINTEL implements GroupInstruction {
 			return false;
 		}
 		OpSubgroupImageMediaBlockWriteINTEL other = (OpSubgroupImageMediaBlockWriteINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.image.equals(other.image)) {
 			return false;
 		}

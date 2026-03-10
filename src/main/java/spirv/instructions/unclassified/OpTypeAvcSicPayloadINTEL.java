@@ -54,7 +54,10 @@ public class OpTypeAvcSicPayloadINTEL implements Instruction, Result {
 			return false;
 		}
 		OpTypeAvcSicPayloadINTEL other = (OpTypeAvcSicPayloadINTEL) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

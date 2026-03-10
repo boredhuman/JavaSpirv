@@ -83,6 +83,9 @@ public class OpTensorViewSetClipNV implements ReservedInstruction, ResultType, R
 			return false;
 		}
 		OpTensorViewSetClipNV other = (OpTensorViewSetClipNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

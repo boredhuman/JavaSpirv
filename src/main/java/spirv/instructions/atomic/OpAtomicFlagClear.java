@@ -49,6 +49,9 @@ public class OpAtomicFlagClear implements AtomicInstruction {
 			return false;
 		}
 		OpAtomicFlagClear other = (OpAtomicFlagClear) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}

@@ -74,6 +74,9 @@ public class OpVmeImageINTEL implements Instruction, ResultType, Result {
 			return false;
 		}
 		OpVmeImageINTEL other = (OpVmeImageINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

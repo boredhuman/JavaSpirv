@@ -74,6 +74,9 @@ public class OpCompositeConstruct implements CompositeInstruction, ResultType, R
 			return false;
 		}
 		OpCompositeConstruct other = (OpCompositeConstruct) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

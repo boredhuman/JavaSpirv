@@ -80,6 +80,9 @@ public class OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL impleme
 			return false;
 		}
 		OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL other = (OpSubgroupAvcImeEvaluateWithSingleReferenceStreaminoutINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

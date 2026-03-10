@@ -71,6 +71,9 @@ public class OpRoundFToTF32INTEL implements ConversionInstruction, ResultType, R
 			return false;
 		}
 		OpRoundFToTF32INTEL other = (OpRoundFToTF32INTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

@@ -55,6 +55,9 @@ public class OpBranchConditional implements ControlFlowInstruction {
 			return false;
 		}
 		OpBranchConditional other = (OpBranchConditional) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.condition.equals(other.condition)) {
 			return false;
 		}

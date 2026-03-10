@@ -79,6 +79,9 @@ public class OpHitObjectTraceRayMotionNV implements ReservedInstruction {
 			return false;
 		}
 		OpHitObjectTraceRayMotionNV other = (OpHitObjectTraceRayMotionNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.hitObject.equals(other.hitObject)) {
 			return false;
 		}

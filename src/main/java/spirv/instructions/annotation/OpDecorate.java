@@ -50,6 +50,9 @@ public class OpDecorate implements AnnotationInstruction {
 			return false;
 		}
 		OpDecorate other = (OpDecorate) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.target.equals(other.target)) {
 			return false;
 		}

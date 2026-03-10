@@ -71,6 +71,9 @@ public class OpSubgroupAvcMceGetInterDistortionsINTEL implements Instruction, Re
 			return false;
 		}
 		OpSubgroupAvcMceGetInterDistortionsINTEL other = (OpSubgroupAvcMceGetInterDistortionsINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

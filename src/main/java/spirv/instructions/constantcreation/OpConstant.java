@@ -74,6 +74,9 @@ public class OpConstant implements ConstantCreationInstruction, ResultType, Resu
 			return false;
 		}
 		OpConstant other = (OpConstant) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

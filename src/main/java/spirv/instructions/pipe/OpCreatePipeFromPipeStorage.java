@@ -71,6 +71,9 @@ public class OpCreatePipeFromPipeStorage implements PipeInstruction, ResultType,
 			return false;
 		}
 		OpCreatePipeFromPipeStorage other = (OpCreatePipeFromPipeStorage) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

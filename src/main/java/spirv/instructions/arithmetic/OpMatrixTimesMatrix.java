@@ -74,6 +74,9 @@ public class OpMatrixTimesMatrix implements ArithmeticInstruction, ResultType, R
 			return false;
 		}
 		OpMatrixTimesMatrix other = (OpMatrixTimesMatrix) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

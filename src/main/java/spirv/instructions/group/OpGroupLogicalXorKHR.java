@@ -78,6 +78,9 @@ public class OpGroupLogicalXorKHR implements GroupInstruction, ResultType, Resul
 			return false;
 		}
 		OpGroupLogicalXorKHR other = (OpGroupLogicalXorKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

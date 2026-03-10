@@ -69,6 +69,9 @@ public class OpSDiv implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpSDiv other = (OpSDiv) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

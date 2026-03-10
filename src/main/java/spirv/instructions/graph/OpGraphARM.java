@@ -68,10 +68,13 @@ public class OpGraphARM implements GraphInstruction, ResultType, Result {
 			return false;
 		}
 		OpGraphARM other = (OpGraphARM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
-		return this.idResult != other.idResult;
+		return this.idResult == other.idResult;
 	}
 
 	@Override

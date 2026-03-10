@@ -54,7 +54,10 @@ public class OpTypeAvcImeResultSingleReferenceStreamoutINTEL implements Instruct
 			return false;
 		}
 		OpTypeAvcImeResultSingleReferenceStreamoutINTEL other = (OpTypeAvcImeResultSingleReferenceStreamoutINTEL) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

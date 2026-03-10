@@ -71,6 +71,9 @@ public class OpTensorWriteARM implements TensorInstruction {
 			return false;
 		}
 		OpTensorWriteARM other = (OpTensorWriteARM) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.tensor.equals(other.tensor)) {
 			return false;
 		}

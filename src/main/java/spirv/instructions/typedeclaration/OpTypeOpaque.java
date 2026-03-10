@@ -60,6 +60,9 @@ public class OpTypeOpaque implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeOpaque other = (OpTypeOpaque) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

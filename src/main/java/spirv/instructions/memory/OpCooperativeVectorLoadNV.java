@@ -93,6 +93,9 @@ public class OpCooperativeVectorLoadNV implements MemoryInstruction, ResultType,
 			return false;
 		}
 		OpCooperativeVectorLoadNV other = (OpCooperativeVectorLoadNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

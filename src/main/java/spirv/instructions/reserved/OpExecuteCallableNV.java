@@ -51,6 +51,9 @@ public class OpExecuteCallableNV implements ReservedInstruction {
 			return false;
 		}
 		OpExecuteCallableNV other = (OpExecuteCallableNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.sbtIndex.equals(other.sbtIndex)) {
 			return false;
 		}

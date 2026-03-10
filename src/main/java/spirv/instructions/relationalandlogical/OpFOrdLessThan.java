@@ -69,6 +69,9 @@ public class OpFOrdLessThan implements RelationalandLogicalInstruction, ResultTy
 			return false;
 		}
 		OpFOrdLessThan other = (OpFOrdLessThan) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

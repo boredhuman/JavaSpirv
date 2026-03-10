@@ -69,6 +69,9 @@ public class OpPtrNotEqual implements MemoryInstruction, ResultType, Result {
 			return false;
 		}
 		OpPtrNotEqual other = (OpPtrNotEqual) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

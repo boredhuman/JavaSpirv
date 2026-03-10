@@ -49,7 +49,10 @@ public class OpTypeBool implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypeBool other = (OpTypeBool) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

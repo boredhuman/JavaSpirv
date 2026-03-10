@@ -85,6 +85,9 @@ public class OpAtomicFAddEXT implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicFAddEXT other = (OpAtomicFAddEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

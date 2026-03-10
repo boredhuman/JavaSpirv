@@ -80,6 +80,9 @@ public class OpSubgroupAvcImeSetDualReferenceINTEL implements Instruction, Resul
 			return false;
 		}
 		OpSubgroupAvcImeSetDualReferenceINTEL other = (OpSubgroupAvcImeSetDualReferenceINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

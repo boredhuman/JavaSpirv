@@ -79,6 +79,9 @@ public class OpCompositeConstructContinuedINTEL implements CompositeInstruction,
 			return false;
 		}
 		OpCompositeConstructContinuedINTEL other = (OpCompositeConstructContinuedINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

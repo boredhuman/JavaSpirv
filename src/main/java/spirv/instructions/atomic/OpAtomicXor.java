@@ -75,6 +75,9 @@ public class OpAtomicXor implements AtomicInstruction, ResultType, Result {
 			return false;
 		}
 		OpAtomicXor other = (OpAtomicXor) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

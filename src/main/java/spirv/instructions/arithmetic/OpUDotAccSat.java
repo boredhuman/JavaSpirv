@@ -94,6 +94,9 @@ public class OpUDotAccSat implements ArithmeticInstruction, ResultType, Result {
 			return false;
 		}
 		OpUDotAccSat other = (OpUDotAccSat) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

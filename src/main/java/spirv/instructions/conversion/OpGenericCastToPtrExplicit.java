@@ -75,6 +75,9 @@ public class OpGenericCastToPtrExplicit implements ConversionInstruction, Result
 			return false;
 		}
 		OpGenericCastToPtrExplicit other = (OpGenericCastToPtrExplicit) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -84,7 +87,7 @@ public class OpGenericCastToPtrExplicit implements ConversionInstruction, Result
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}
-		return this.storage != other.storage;
+		return this.storage == other.storage;
 	}
 
 	@Override

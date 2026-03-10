@@ -68,6 +68,9 @@ public class OpCooperativeVectorStoreNV implements MemoryInstruction {
 			return false;
 		}
 		OpCooperativeVectorStoreNV other = (OpCooperativeVectorStoreNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.pointer.equals(other.pointer)) {
 			return false;
 		}

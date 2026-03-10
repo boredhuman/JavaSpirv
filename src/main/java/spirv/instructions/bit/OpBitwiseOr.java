@@ -69,6 +69,9 @@ public class OpBitwiseOr implements BitInstruction, ResultType, Result {
 			return false;
 		}
 		OpBitwiseOr other = (OpBitwiseOr) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

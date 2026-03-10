@@ -77,6 +77,9 @@ public class OpBuildNDRange implements DeviceSideEnqueueInstruction, ResultType,
 			return false;
 		}
 		OpBuildNDRange other = (OpBuildNDRange) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

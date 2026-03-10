@@ -78,6 +78,9 @@ public class OpGroupIAdd implements GroupInstruction, ResultType, Result {
 			return false;
 		}
 		OpGroupIAdd other = (OpGroupIAdd) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

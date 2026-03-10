@@ -71,6 +71,9 @@ public class OpSubgroupAvcMceGetInterDirectionsINTEL implements Instruction, Res
 			return false;
 		}
 		OpSubgroupAvcMceGetInterDirectionsINTEL other = (OpSubgroupAvcMceGetInterDirectionsINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

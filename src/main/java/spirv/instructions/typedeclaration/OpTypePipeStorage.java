@@ -54,7 +54,10 @@ public class OpTypePipeStorage implements TypeDeclarationInstruction, Result {
 			return false;
 		}
 		OpTypePipeStorage other = (OpTypePipeStorage) o;
-		return this.idResult != other.idResult;
+		if (this == other) {
+			return true;
+		}
+		return this.idResult == other.idResult;
 	}
 
 	@Override

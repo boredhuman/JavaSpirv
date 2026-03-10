@@ -67,6 +67,9 @@ public class OpConditionalEntryPointINTEL implements ModeSettingInstruction {
 			return false;
 		}
 		OpConditionalEntryPointINTEL other = (OpConditionalEntryPointINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.condition.equals(other.condition)) {
 			return false;
 		}

@@ -88,6 +88,9 @@ public class OpGroupNonUniformRotateKHR implements GroupInstruction, ResultType,
 			return false;
 		}
 		OpGroupNonUniformRotateKHR other = (OpGroupNonUniformRotateKHR) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}

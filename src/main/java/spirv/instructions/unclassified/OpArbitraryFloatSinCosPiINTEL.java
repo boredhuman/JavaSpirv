@@ -86,6 +86,9 @@ public class OpArbitraryFloatSinCosPiINTEL implements Instruction, ResultType, R
 			return false;
 		}
 		OpArbitraryFloatSinCosPiINTEL other = (OpArbitraryFloatSinCosPiINTEL) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
@@ -107,7 +110,7 @@ public class OpArbitraryFloatSinCosPiINTEL implements Instruction, ResultType, R
 		if (this.rounding != other.rounding) {
 			return false;
 		}
-		return this.roundingAccuracy != other.roundingAccuracy;
+		return this.roundingAccuracy == other.roundingAccuracy;
 	}
 
 	@Override

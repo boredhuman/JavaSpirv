@@ -60,6 +60,9 @@ public class OpEmitMeshTasksEXT implements ReservedInstruction {
 			return false;
 		}
 		OpEmitMeshTasksEXT other = (OpEmitMeshTasksEXT) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.groupCountX.equals(other.groupCountX)) {
 			return false;
 		}

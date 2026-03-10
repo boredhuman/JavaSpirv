@@ -60,6 +60,9 @@ public class OpTypeTensorLayoutNV implements TypeDeclarationInstruction, Result 
 			return false;
 		}
 		OpTypeTensorLayoutNV other = (OpTypeTensorLayoutNV) o;
+		if (this == other) {
+			return true;
+		}
 		if (this.idResult != other.idResult) {
 			return false;
 		}

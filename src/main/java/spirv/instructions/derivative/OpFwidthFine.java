@@ -71,6 +71,9 @@ public class OpFwidthFine implements DerivativeInstruction, ResultType, Result {
 			return false;
 		}
 		OpFwidthFine other = (OpFwidthFine) o;
+		if (this == other) {
+			return true;
+		}
 		if (!this.idResultType.equals(other.idResultType)) {
 			return false;
 		}
