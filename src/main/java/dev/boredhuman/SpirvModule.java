@@ -102,6 +102,42 @@ public class SpirvModule {
 		}
 	}
 
+	public List<Instruction> toInstructionList() {
+		List<Instruction> instructions = new ArrayList<>();
+
+		instructions.addAll(this.capabilities);
+		instructions.addAll(this.extensions);
+		instructions.addAll(this.instructionExtensions);
+		instructions.add(this.opMemoryModel);
+		instructions.addAll(this.entryPoints);
+		instructions.addAll(this.executionModes);
+		instructions.addAll(this.debugInformation);
+		instructions.addAll(this.debugNaming);
+		instructions.addAll(this.moduleProcesses);
+		instructions.addAll(this.annotations);
+		instructions.addAll(this.typeDeclarations);
+		instructions.addAll(this.constantCreations);
+		instructions.addAll(this.globalVariables);
+		instructions.addAll(this.lineDebugInformation);
+
+		for (int i = 0, len = this.functionDeclarations.size(); i < len; i++) {
+			SpirvFunction function = this.functionDeclarations.get(i);
+			instructions.add(function.function);
+			instructions.addAll(function.parameterList);
+			instructions.add(function.functionEnd);
+		}
+
+		for (int i = 0, len = this.functionDefinitions.size(); i < len; i++) {
+			SpirvFunction function = this.functionDefinitions.get(i);
+			instructions.add(function.function);
+			instructions.addAll(function.parameterList);
+			instructions.addAll(function.body);
+			instructions.add(function.functionEnd);
+		}
+
+		return instructions;
+	}
+
 	@SuppressWarnings("unchecked")
 	public static <T extends Instruction> void into(List<T> dst, AtomicInteger offset, List<Instruction> instructions, int... opcodes) {
 		int i = offset.get();
