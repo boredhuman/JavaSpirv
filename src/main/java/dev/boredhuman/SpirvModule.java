@@ -35,10 +35,8 @@ public class SpirvModule {
 	public List<Instruction> debugNaming = new ArrayList<>();
 	public List<OpModuleProcessed> moduleProcesses = new ArrayList<>();
 	public List<AnnotationInstruction> annotations = new ArrayList<>();
-	public List<TypeDeclarationInstruction> typeDeclarations = new ArrayList<>();
-	public List<ConstantCreationInstruction> constantCreations = new ArrayList<>();
-	public List<OpVariable> globalVariables = new ArrayList<>();
-	public List<DebugInstruction> lineDebugInformation = new ArrayList<>();
+	// These instructions were previously in seperate lists however since the ordering is important it's a singular list to keep the original order preserved.
+	public List<Instruction> typesConstantsGlobalsDebug = new ArrayList<>();
 	public List<SpirvFunction> functionDeclarations = new ArrayList<>();
 	public List<SpirvFunction> functionDefinitions = new ArrayList<>();
 
@@ -52,7 +50,8 @@ public class SpirvModule {
 		this.opMemoryModel = (OpMemoryModel) instructions.get(offset.getAndIncrement());
 		SpirvModule.into(this.entryPoints, offset, instructions, OpCodes.OP_ENTRY_POINT);
 		SpirvModule.into(this.executionModes, offset, instructions, OpCodes.OP_EXECUTION_MODE, OpCodes.OP_EXECUTION_MODE_ID);
-		SpirvModule.into(this.debugInformation, offset, instructions, OpCodes.OP_STRING, OpCodes.OP_SOURCE_EXTENSION, OpCodes.OP_SOURCE, OpCodes.OP_SOURCE_CONTINUED);
+		SpirvModule.into(
+			this.debugInformation, offset, instructions, OpCodes.OP_STRING, OpCodes.OP_SOURCE_EXTENSION, OpCodes.OP_SOURCE, OpCodes.OP_SOURCE_CONTINUED);
 		SpirvModule.into(this.debugNaming, offset, instructions, OpCodes.OP_NAME, OpCodes.OP_MEMBER_NAME);
 		SpirvModule.into(this.moduleProcesses, offset, instructions, OpCodes.OP_MODULE_PROCESSED);
 		SpirvModule.into(this.annotations, offset, instructions, inst -> inst instanceof AnnotationInstruction);
@@ -64,15 +63,9 @@ public class SpirvModule {
 				break;
 			}
 
-			if (instruction instanceof TypeDeclarationInstruction) {
-				this.typeDeclarations.add((TypeDeclarationInstruction) instruction);
-			} else if (instruction instanceof ConstantCreationInstruction) {
-				this.constantCreations.add((ConstantCreationInstruction) instruction);
-			} else if (instruction instanceof OpVariable) {
-				OpVariable opVariable = (OpVariable) instruction;
-				this.globalVariables.add(opVariable);
-			} else if (instruction instanceof DebugInstruction) {
-				this.lineDebugInformation.add((DebugInstruction) instruction);
+			if (instruction instanceof TypeDeclarationInstruction || instruction instanceof ConstantCreationInstruction || instruction instanceof OpVariable ||
+				instruction instanceof DebugInstruction) {
+				this.typesConstantsGlobalsDebug.add(instruction);
 			}
 		}
 
@@ -115,10 +108,7 @@ public class SpirvModule {
 		instructions.addAll(this.debugNaming);
 		instructions.addAll(this.moduleProcesses);
 		instructions.addAll(this.annotations);
-		instructions.addAll(this.typeDeclarations);
-		instructions.addAll(this.constantCreations);
-		instructions.addAll(this.globalVariables);
-		instructions.addAll(this.lineDebugInformation);
+		instructions.addAll(this.typesConstantsGlobalsDebug);
 
 		for (int i = 0, len = this.functionDeclarations.size(); i < len; i++) {
 			SpirvFunction function = this.functionDeclarations.get(i);
@@ -159,7 +149,8 @@ public class SpirvModule {
 	}
 
 	@SuppressWarnings("unchecked")
-	public static <T extends Instruction> void into(List<T> dst, AtomicInteger offset, List<Instruction> instructions, Function<Instruction, Boolean> predicate) {
+	public static <T extends Instruction> void into(List<T> dst, AtomicInteger offset, List<Instruction> instructions,
+													Function<Instruction, Boolean> predicate) {
 		int i = offset.get();
 		int size = instructions.size();
 		while (i < size) {
